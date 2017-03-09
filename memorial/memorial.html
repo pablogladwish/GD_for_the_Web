@@ -1,0 +1,196 @@
+<!DOCTYPE html><html><head>
+
+    <title>2D—Web</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="three.js"></script>
+    <script src="Detector.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="OBJLoader.js"></script>
+    <script src="MTLLoader.js"></script>
+ <script><body onLoad="window.scroll(1000, 1000)"></script>
+ 
+    <style>
+    body{background: -webkit-radial-gradient(red, yellow, green);
+width:500em;
+height:500em;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+   #header{position:fixed;
+   top:0px; left:50vw; z-index:9999999999; color:#0000ff;}
+div{position:absolute; top:250em; left:250em;}</style>
+
+</head>
+<body>
+	
+	<h1 id="header">In memorial of the scrollbar</h1>
+    <script>
+
+        if (!Detector.webgl) {
+            Detector.addGetWebGLMessage();
+        }
+
+        var container;
+
+        var camera, controls, scene, renderer;
+        var lighting, ambient, keyLight, fillLight, backLight;
+
+        var windowHalfX = window.innerWidth / 2;
+        var windowHalfY = window.innerHeight / 2;
+
+		
+        init();
+        animate();
+
+        function init() {
+
+            container = document.createElement('div');
+            document.body.appendChild(container);
+
+            /* Camera */
+
+            camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 100000);
+            camera.position.z = 0;
+            camera.position.y = 10;
+             camera.position.x = 2;
+             /*camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
+    camera.position.z = 1000;*/
+
+            /* Scene */
+
+            scene = new THREE.Scene();
+            lighting = true;
+
+            ambient = new THREE.AmbientLight(0xbcbcbc, 1.0);
+            scene.add(ambient);
+
+            keyLight = new THREE.DirectionalLight(new THREE.Color('hsl(30, 80%, 75%)'), 1.0);
+            keyLight.position.set(-100, 0, 100);
+
+            fillLight = new THREE.DirectionalLight(new THREE.Color('hex(0000ff)'), 0.75);
+            fillLight.position.set(100, 0, 100);
+
+            backLight = new THREE.DirectionalLight(0xffffff, 1.0);
+            backLight.position.set(100, 0, -100).normalize();
+            
+            keyLight = new THREE.DirectionalLight(new THREE.Color('hex(0000ff)'), 0.5);
+keyLight.position.set(-100, 0, 100);
+
+fillLight = new THREE.DirectionalLight(new THREE.Color('hex(0000ff)'), 0.75);
+fillLight.position.set(100, 0, 100);
+
+backLight = new THREE.DirectionalLight(0xf40000, 1.0);
+backLight.position.set(100, 0, -100).normalize();
+
+scene.add(keyLight);
+scene.add(fillLight);
+scene.add(backLight);
+
+            /* Model */
+
+            var mtlLoader = new THREE.MTLLoader();
+            mtlLoader.setBaseUrl('assets/');
+            mtlLoader.setPath('assets/');
+            mtlLoader.load('scroll.mtl', function (materials) {
+
+                materials.preload();
+
+
+                var objLoader = new THREE.OBJLoader();
+                objLoader.setMaterials(materials);
+                objLoader.setPath('assets/');
+                objLoader.load('scroll.obj', function (object) {
+
+                    scene.add(object);
+
+                });
+
+            });
+
+            /* Renderer */
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(1000, 1000);
+            renderer.setClearColor(new THREE.Color("#000000"));
+
+            container.appendChild(renderer.domElement);
+
+            /* Controls */
+
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.25;
+            controls.enableZoom = true;
+
+            /* Events */
+
+            window.addEventListener('resize', onWindowResize, false);
+            window.addEventListener('keydown', onKeyboardEvent, false);
+
+        }
+
+        function onWindowResize() {
+
+            windowHalfX = window.innerWidth / 2;
+            windowHalfY = window.innerHeight / 2;
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+        }
+
+        function onKeyboardEvent(e) {
+
+            if (e.code === 'KeyL') {
+
+                lighting = !lighting;
+
+                if (lighting) {
+
+                    ambient.intensity = 0.25;
+                    scene.add(keyLight);
+                    scene.add(fillLight);
+                    scene.add(backLight);
+
+                } else {
+
+                    ambient.intensity = 1.0;
+                    scene.remove(keyLight);
+                    scene.remove(fillLight);
+                    scene.remove(backLight);
+
+                }
+
+            }
+
+        }
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+
+            controls.update();
+
+            render();
+
+        }
+        
+
+        function render() {
+
+            renderer.render(scene, camera);
+
+        }
+
+    </script>
+    
+
+
+<div></div></body></html>

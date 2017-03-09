@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>macintosh</author>
+      <authoring_tool>Adobe Photoshop</authoring_tool>
+      <comments>1</comments>
+    </contributor>
+    <created>2017-03-08T22:47:25Z</created>
+    <modified>2017-03-08T22:47:25Z</modified>
+    <unit meter="0.001" name="meter"/>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="Default_Camera1" name="Default_Camera">
+      <optics>
+        <technique_common>
+          <perspective>
+            <yfov>30</yfov>
+            <aspect_ratio>1</aspect_ratio>
+            <znear>1</znear>
+            <zfar>1000</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+    </camera>
+  </library_cameras>
+  <library_lights>
+    <light id="Infinite_Light_2" name="Infinite_Light_1">
+      <technique_common>
+        <directional>
+          <color>1 1 1</color>
+        </directional>
+      </technique_common>
+      <extra>
+        <technique profile="MAX3D">
+          <aspect_ratio>1</aspect_ratio>
+          <overshoot>1</overshoot>
+          <decay_type>0</decay_type>
+          <decay_start>10</decay_start>
+          <use_near_attenuation>1</use_near_attenuation>
+          <use_far_attenuation>1</use_far_attenuation>
+          <near_attenuation_start>1</near_attenuation_start>
+          <near_attenuation_end>2</near_attenuation_end>
+          <far_attenuation_start>5</far_attenuation_start>
+          <far_attenuation_end>10</far_attenuation_end>
+        </technique>
+        <technique profile="FCOLLADA">
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0</quadratic_attenuation>
+          <falloff_angle>5</falloff_angle>
+          <falloff_exponent>1</falloff_exponent>
+          <intensity>0.9</intensity>
+          <outer_cone>5</outer_cone>
+        </technique>
+      </extra>
+    </light>
+    <light id="Image_Based_Light_2" name="Image_Based_Light_1">
+      <technique_common>
+        <directional>
+          <color>0.1 0.1 0.1</color>
+        </directional>
+      </technique_common>
+      <extra>
+        <technique profile="FCOLLADA">
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0</quadratic_attenuation>
+          <falloff_angle>5</falloff_angle>
+          <falloff_exponent>1</falloff_exponent>
+          <intensity>1</intensity>
+          <outer_cone>5</outer_cone>
+        </technique>
+      </extra>
+      <extra type="adobe_light_type">
+        <technique profile="ADOBE">
+          <type>
+            <imageBased>1</imageBased>
+          </type>
+        </technique>
+      </extra>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="ID11_-_Default_Texture.psd">
+      <init_from>./ID11%20-%20Default%20Texture.psd</init_from>
+      <extra>
+        <technique profile="MAYA">
+          <dgnode_type>kPSDFile</dgnode_type>
+        </technique>
+      </extra>
+    </image>
+    <image id="ID25_-_Default_Texture0000.psd">
+      <init_from>./ID25%20-%20Default%20Texture0000.psd</init_from>
+      <extra>
+        <technique profile="MAYA">
+          <dgnode_type>kPSDFile</dgnode_type>
+        </technique>
+      </extra>
+    </image>
+    <image id="ID34_-_Default_Texture0000.psd">
+      <init_from>./ID34%20-%20Default%20Texture0000.psd</init_from>
+      <extra>
+        <technique profile="MAYA">
+          <dgnode_type>kPSDFile</dgnode_type>
+        </technique>
+      </extra>
+    </image>
+    <image id="ID5_-_Default_Texture0000.psd">
+      <init_from>./ID5%20-%20Default%20Texture0000.psd</init_from>
+      <extra>
+        <technique profile="MAYA">
+          <dgnode_type>kPSDFile</dgnode_type>
+        </technique>
+      </extra>
+    </image>
+    <image id="Default_IBL0000.tif">
+      <init_from>./Default%20IBL0000.tif</init_from>
+      <extra>
+        <technique profile="MAYA">
+          <dgnode_type>kFile</dgnode_type>
+        </technique>
+      </extra>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="ID11" name="ID11">
+      <instance_effect url="#ID11-fx"/>
+    </material>
+    <material id="ID25" name="ID25">
+      <instance_effect url="#ID25-fx"/>
+    </material>
+    <material id="ID34" name="ID34">
+      <instance_effect url="#ID34-fx"/>
+    </material>
+    <material id="ID5" name="ID5">
+      <instance_effect url="#ID5-fx"/>
+    </material>
+    <material id="Ground_Plane_Material" name="Ground_Plane_Material">
+      <instance_effect url="#Ground_Plane_Material-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="ID11-fx" name="ID11">
+      <profile_COMMON>
+        <newparam sid="ID11_-_Default_Texture_psd-surface">
+          <surface type="2D">
+            <init_from>ID11_-_Default_Texture.psd</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="ID11_-_Default_Texture_psd-sampler">
+          <sampler2D>
+            <source>ID11_-_Default_Texture_psd-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.1 0.1 0.1 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID11_-_Default_Texture_psd-sampler" texcoord="UVSET0">
+                <extra>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+                <extra type="texture_offset">
+                  <technique profile="ADOBE">
+                    <offsets>
+                      <offsetu>0</offsetu>
+                      <offsetv>0</offsetv>
+                      <scaleu>1</scaleu>
+                      <scalev>1</scalev>
+                      <angle>0</angle>
+                    </offsets>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.4 0.4 0.4 1</color>
+            </specular>
+            <shininess>
+              <float>0.290241</float>
+            </shininess>
+            <reflective>
+              <color>1 1 1 1</color>
+            </reflective>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+            <index_of_refraction>
+              <float>1</float>
+            </index_of_refraction>
+          </phong>
+          <extra>
+            <technique profile="FCOLLADA"/>
+          </extra>
+        </technique>
+        <extra type="material_overlay">
+          <technique profile="ADOBE">
+            <colors>
+              <diffuse_color>0.6 0.6 0.6</diffuse_color>
+              <specular_color>0.4 0.4 0.4</specular_color>
+              <reflectivity_factor>0</reflectivity_factor>
+              <shininess>0.290241</shininess>
+              <roughness>0</roughness>
+            </colors>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>1</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="ID25-fx" name="ID25">
+      <profile_COMMON>
+        <newparam sid="ID25_-_Default_Texture0000_psd-surface">
+          <surface type="2D">
+            <init_from>ID25_-_Default_Texture0000.psd</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="ID25_-_Default_Texture0000_psd-sampler">
+          <sampler2D>
+            <source>ID25_-_Default_Texture0000_psd-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.1 0.1 0.1 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID25_-_Default_Texture0000_psd-sampler" texcoord="UVSET0">
+                <extra>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+                <extra type="texture_offset">
+                  <technique profile="ADOBE">
+                    <offsets>
+                      <offsetu>0</offsetu>
+                      <offsetv>0</offsetv>
+                      <scaleu>1</scaleu>
+                      <scalev>1</scalev>
+                      <angle>0</angle>
+                    </offsets>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.4 0.4 0.4 1</color>
+            </specular>
+            <shininess>
+              <float>0.290241</float>
+            </shininess>
+            <reflective>
+              <color>1 1 1 1</color>
+            </reflective>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+            <index_of_refraction>
+              <float>1</float>
+            </index_of_refraction>
+          </phong>
+          <extra>
+            <technique profile="FCOLLADA"/>
+          </extra>
+        </technique>
+        <extra type="material_overlay">
+          <technique profile="ADOBE">
+            <colors>
+              <diffuse_color>0.898039 0.898039 0.898039</diffuse_color>
+              <specular_color>0.4 0.4 0.4</specular_color>
+              <reflectivity_factor>0</reflectivity_factor>
+              <shininess>0.290241</shininess>
+              <roughness>0</roughness>
+            </colors>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>1</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="ID34-fx" name="ID34">
+      <profile_COMMON>
+        <newparam sid="ID34_-_Default_Texture0000_psd-surface">
+          <surface type="2D">
+            <init_from>ID34_-_Default_Texture0000.psd</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="ID34_-_Default_Texture0000_psd-sampler">
+          <sampler2D>
+            <source>ID34_-_Default_Texture0000_psd-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.1 0.1 0.1 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID34_-_Default_Texture0000_psd-sampler" texcoord="UVSET0">
+                <extra>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+                <extra type="texture_offset">
+                  <technique profile="ADOBE">
+                    <offsets>
+                      <offsetu>0</offsetu>
+                      <offsetv>0</offsetv>
+                      <scaleu>1</scaleu>
+                      <scalev>1</scalev>
+                      <angle>0</angle>
+                    </offsets>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.4 0.4 0.4 1</color>
+            </specular>
+            <shininess>
+              <float>0.290241</float>
+            </shininess>
+            <reflective>
+              <color>1 1 1 1</color>
+            </reflective>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+            <index_of_refraction>
+              <float>1</float>
+            </index_of_refraction>
+          </phong>
+          <extra>
+            <technique profile="FCOLLADA"/>
+          </extra>
+        </technique>
+        <extra type="material_overlay">
+          <technique profile="ADOBE">
+            <colors>
+              <diffuse_color>0.643137 0.698039 0.733333</diffuse_color>
+              <specular_color>0.4 0.4 0.4</specular_color>
+              <reflectivity_factor>0</reflectivity_factor>
+              <shininess>0.290241</shininess>
+              <roughness>0</roughness>
+            </colors>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>1</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="ID5-fx" name="ID5">
+      <profile_COMMON>
+        <newparam sid="ID5_-_Default_Texture0000_psd-surface">
+          <surface type="2D">
+            <init_from>ID5_-_Default_Texture0000.psd</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="ID5_-_Default_Texture0000_psd-sampler">
+          <sampler2D>
+            <source>ID5_-_Default_Texture0000_psd-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.1 0.1 0.1 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID5_-_Default_Texture0000_psd-sampler" texcoord="UVSET0">
+                <extra>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+                <extra type="texture_offset">
+                  <technique profile="ADOBE">
+                    <offsets>
+                      <offsetu>0</offsetu>
+                      <offsetv>0</offsetv>
+                      <scaleu>1</scaleu>
+                      <scalev>1</scalev>
+                      <angle>0</angle>
+                    </offsets>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.4 0.4 0.4 1</color>
+            </specular>
+            <shininess>
+              <float>0.290241</float>
+            </shininess>
+            <reflective>
+              <color>1 1 1 1</color>
+            </reflective>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+            <index_of_refraction>
+              <float>1</float>
+            </index_of_refraction>
+          </phong>
+          <extra>
+            <technique profile="FCOLLADA"/>
+          </extra>
+        </technique>
+        <extra type="material_overlay">
+          <technique profile="ADOBE">
+            <colors>
+              <diffuse_color>1 1 1</diffuse_color>
+              <specular_color>0.4 0.4 0.4</specular_color>
+              <reflectivity_factor>0</reflectivity_factor>
+              <shininess>0.290241</shininess>
+              <roughness>0</roughness>
+            </colors>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>1</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="Ground_Plane_Material-fx" name="Ground_Plane_Material">
+      <profile_COMMON>
+        <newparam sid="Default_IBL0000_tif-surface">
+          <surface type="2D">
+            <init_from>Default_IBL0000.tif</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="Default_IBL0000_tif-sampler">
+          <sampler2D>
+            <source>Default_IBL0000_tif-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>1 1 1 1</color>
+            </ambient>
+            <diffuse>
+              <color>0 0 0 1</color>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>0.2</float>
+            </shininess>
+            <reflective>
+              <color>1 1 1 1</color>
+            </reflective>
+            <reflectivity>
+              <float>0</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>0.6</float>
+            </transparency>
+            <index_of_refraction>
+              <float>1</float>
+            </index_of_refraction>
+          </phong>
+          <extra>
+            <technique profile="FCOLLADA">
+              <imagebased>
+                <texture texture="Default_IBL0000_tif-sampler" texcoord="UVSET0">
+                  <extra>
+                    <technique profile="MAX3D">
+                      <amount>1</amount>
+                    </technique>
+                  </extra>
+                  <extra type="texture_offset">
+                    <technique profile="ADOBE">
+                      <offsets>
+                        <offsetu>0</offsetu>
+                        <offsetv>0</offsetv>
+                        <scaleu>1</scaleu>
+                        <scalev>1</scalev>
+                        <angle>0</angle>
+                      </offsets>
+                    </technique>
+                  </extra>
+                </texture>
+              </imagebased>
+            </technique>
+          </extra>
+        </technique>
+        <extra type="material_overlay">
+          <technique profile="ADOBE">
+            <colors>
+              <diffuse_color>0 0 0</diffuse_color>
+              <specular_color>1 1 1</specular_color>
+              <reflectivity_factor>0</reflectivity_factor>
+              <shininess>0.2</shininess>
+              <roughness>0</roughness>
+            </colors>
+          </technique>
+        </extra>
+        <extra type="adobe_gp_material">
+          <technique profile="ADOBE">
+            <gp_material>
+              <is_gp_material>1</is_gp_material>
+            </gp_material>
+          </technique>
+        </extra>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>1</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="SketchUp1" name="SketchUp">
+      <mesh>
+        <source id="SketchUp1-positions">
+          <float_array id="SketchUp1-positions-array" count="150">-0.786978 0.203195 -1.87778 1.88602 0.203195 -1.87778 -0.786978 -0.066675 -1.87778 1.88602 -0.066675 -1.87778 -0.786978 0.203195 -0.958949 -0.786978 -0.066675 -0.958949 1.88602 -0.066675 -0.958949 1.88602 0.203195 -0.958949 7.42618 0.203195 -1.96533 -2.21204 0.203195 -1.96533 7.42618 -0.066675 -1.96533 -2.21204 -0.066675 -1.96533 7.42618 0.203195 -0.87302 7.42618 -0.066675 -0.87302 -2.21204 -0.066675 -0.87302 -2.21204 0.203195 -0.87302 7.72634 0.203195 -1.70248 7.76925 0.203195 -1.78521 8.51853 0.203195 -1.96533 7.70522 0.203195 -1.06455 8.31388 0.203195 -1.39786 7.75431 0.203195 -0.974856 8.51853 0.203195 -0.87302 8.36298 0.203195 -1.30817 8.35679 0.203195 -1.4806 7.76925 0.158219 -1.78521 8.31388 0.158219 -1.39786 7.72634 0.158219 -1.70248 8.35679 0.158219 -1.4806 8.31388 0.151791 -1.39786 7.70522 0.151791 -1.06455 8.36298 0.151791 -1.30817 7.75431 0.151791 -0.974856 -2.51152 0.151791 -1.81666 -3.07109 0.151791 -1.39366 -3.12019 0.151791 -1.48335 -2.46242 0.151791 -1.72697 -3.12019 0.203195 -1.48335 -2.51152 0.203195 -1.81666 -2.46242 0.203195 -1.72697 -3.07109 0.203195 -1.39366 -2.48355 0.145368 -1.089 -3.07109 0.145368 -1.39366 -2.48355 0.203195 -1.089 -3.11395 0.145368 -1.31092 -3.11395 0.203195 -1.31092 -2.52645 0.203195 -1.00626 -2.52645 0.145368 -1.00626 -3.30435 0.203195 -0.87302 -3.30435 0.203195 -1.96533</float_array>
+          <technique_common>
+            <accessor source="#SketchUp1-positions-array" count="50" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="SketchUp1-normals">
+          <float_array id="SketchUp1-normals-array" count="1116">0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.886256 0 -0.459541 -0.886256 0 -0.459541 -0.886256 0 -0.459541 -0.886256 0 -0.459541 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.886256 0 0.459541 0.886256 0 0.459541 0.886256 0 0.459541 0.886256 0 0.459541 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 0.479505 0 0.875616 0.479505 0 0.875616 0.479505 0 0.875616 0.479505 0 0.875616 0.479505 0 0.875616 0.479505 0 0.875616 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0.479505 0 0.875616 0.479505 0 0.875616 0.479505 0 0.875616 0.479505 0 0.875616 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 -0.886256 0 -0.459541 -0.886256 0 -0.459541 -0.886256 0 -0.459541 -0.886256 0 -0.459541 -0.886256 0 -0.459541 -0.886256 0 -0.459541 -0.886256 0 -0.459541 0.886256 0 0.459541 0.886256 0 0.459541 0.886256 0 0.459541 0.886256 0 0.459541 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 -0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.886256 0 0.459541 0.886256 0 0.459541 0.886256 0 0.459541 0.886256 0 0.459541 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.886256 0 -0.459541 -0.886256 0 -0.459541 -0.886256 0 -0.459541 -0.886256 0 -0.459541 0.479505 0 0.875616 0.479505 0 0.875616 0.479505 0 0.875616 0.479505 0 0.875616 0.479505 0 0.875616 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0.479505 0 0.875616 0.479505 0 0.875616 0.479505 0 0.875616 0.479505 0 0.875616 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.875616 0 0.479505 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 -0.479505 0 -0.875616 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 0.875616 0 -0.479505 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 -0.459541 0 0.886256 0.886256 0 0.459541 0.886256 0 0.459541 0.886256 0 0.459541 0.886256 0 0.459541 0.886256 0 0.459541 0.886256 0 0.459541 0.886256 0 0.459541 -0.886256 0 -0.459541 -0.886256 0 -0.459541 -0.886256 0 -0.459541 -0.886256 0 -0.459541 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0.459541 0 -0.886256 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0 0 0.998312 0</float_array>
+          <technique_common>
+            <accessor source="#SketchUp1-normals-array" count="372" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="SketchUp1-texcoords">
+          <float_array id="SketchUp1-texcoords-array" count="744">0.365796 0.935867 0.634417 0.940574 0.365321 0.962987 0.633941 0.967694 0.365796 0.935867 0.365321 0.962987 0.273458 0.934249 0.272983 0.96137 0.633941 0.967694 0.634417 0.940574 0.726279 0.969312 0.726754 0.942191 0.726754 0.942191 0.995375 0.946898 0.726279 0.969312 0.272983 0.96137 0.004362 0.956663 0.273458 0.934249 0.985748 0.928741 0.017015 0.928741 0.985748 0.901617 0.017015 0.901617 0.452794 0.86063 0.449314 0.833729 0.561675 0.846545 0.438542 0.996022 0.435062 0.969121 0.547423 0.981937 0.532972 0.83126 0.540052 0.805075 0.638955 0.859914 0.386683 0.86179 0.373174 0.838269 0.481885 0.807111 0.985748 0.895487 0.017015 0.895487 0.985748 0.868362 0.017015 0.868362 0.416667 0.894928 0.162574 0.974273 0.160894 0.89503 0.417485 0.972544 0.003936 0.873547 0.149876 0.882758 0.011124 0.995247 0.993183 0.878533 0.424012 0.885362 0.155759 0.985736 0.989269 0.989193 0.427891 0.983094 0.039855 0.836957 0.962682 0.862796 0.039855 0.862796 0.962682 0.836957 0.570412 0.719947 0.637465 0.635629 0.653241 0.656093 0.536232 0.721014 0.451914 0.653961 0.472378 0.638185 0.427536 0.688406 0.323976 0.658724 0.336845 0.636317 0.490643 0.636317 0.594203 0.665999 0.581334 0.688406 0.039855 0.800725 0.962682 0.826564 0.039855 0.826564 0.962682 0.800725 0.416667 0.894928 0.149876 0.882758 0.424012 0.885362 0.160894 0.89503 0.149876 0.882758 0.162574 0.974273 0.155759 0.985736 0.160894 0.89503 0.416667 0.894928 0.427891 0.983094 0.417485 0.972544 0.424012 0.885362 0.162574 0.974273 0.427891 0.983094 0.155759 0.985736 0.417485 0.972544 0.456383 0.674504 0.481015 0.703703 0.440667 0.777901 0.486266 0.696489 0.380435 0.692029 0.415883 0.702973 0.31306 0.722109 0.469837 0.763786 0.532248 0.740991 0.473193 0.772983 0.544069 0.793617 0.535605 0.750188 0.559784 0.69022 0.319793 0.673648 0.662793 0.640647 0.663338 0.689571 0.656833 0.625239 0.664084 0.631817 0.300725 0.782609 0.36409 0.791532 0.300724 0.791532 0.364091 0.782609 0.707492 0.626625 0.66573 0.578773 0.710537 0.62358 0.662685 0.581819 0.627015 0.620525 0.635799 0.615942 0.635934 0.620246 0.626881 0.616221 0.627015 0.620525 0.563545 0.618198 0.626881 0.616221 0.561594 0.605072 0.625071 0.607217 0.561741 0.609376 0.667054 0.64127 0.664084 0.631817 0.668346 0.632441 0.662793 0.640647 0.543478 0.634058 0.609965 0.638361 0.543524 0.638979 0.60996 0.637746 0.609919 0.63344 0.681159 0.673913 0.670359 0.675764 0.671795 0.671056 0.656833 0.625239 0.667391 0.628172 0.664084 0.631817 0.355072 0.623188 0.355072 0.623188 0.355072 0.623188 0.438406 0.67029 0.384499 0.630228 0.391423 0.623307 0.431482 0.677211 0.684783 0.695652 0.673982 0.697503 0.675418 0.692796 0.681159 0.65942 0.670359 0.661271 0.671795 0.656564 0.290072 0.635986 0.338884 0.590637 0.293679 0.639334 0.479625 0.613614 0.413043 0.611165 0.479442 0.608696 0.344836 0.750766 0.399707 0.723293 0.406177 0.73176 0.338879 0.743555 0.41084 0.735833 0.344836 0.750766 0.406177 0.73176 0.345419 0.754299 0.344836 0.750766 0.334735 0.740751 0.338879 0.743555 0.345419 0.754299 0.334735 0.740751 0.399707 0.723293 0.338879 0.743555 0.398606 0.71849 0.41084 0.735833 0.399707 0.723293 0.398606 0.71849 0.406177 0.73176 0.300351 0.655259 0.347288 0.612682 0.300769 0.655711 0.343529 0.608618 0.490836 0.608673 0.554348 0.606225 0.554156 0.611144 0.326087 0.73913 0.317166 0.744667 0.317166 0.73913 0.326087 0.744667 0.355072 0.634058 0.355072 0.634058 0.355072 0.634058 0.405797 0.608696 0.396874 0.614233 0.396874 0.608696 0.405797 0.614233 0.668528 0.771652 0.67745 0.708284 0.677449 0.771649 0.668527 0.708284 0.48913 0.619565 0.552677 0.622315 0.489374 0.625097 0.483837 0.62872 0.42029 0.62597 0.483594 0.623188 0.628208 0.701978 0.632829 0.76292 0.57374 0.74003 0.367867 0.637895 0.373032 0.606356 0.377569 0.639284 0.660917 0.780654 0.649562 0.676687 0.629606 0.77124 0.55695 0.79201 0.57052 0.74835 0.416271 0.786613 0.41084 0.735833 0.443681 0.682177 0.67029 0.608696 0.699565 0.643813 0.655271 0.601815 0.673145 0.788805 0.664523 0.791095 0.676339 0.779551 0.345419 0.754299 0.313432 0.76147 0.858447 0.004566 0.858447 0.297374 0.006632 0.004566 0.006632 0.297374 0.342501 0.583228 0.340588 0.379833 0.531983 0.490618 0.253137 0.316707 0.355545 0.609909 0.244888 0.6647 0.356906 0.351628 0.601144 0.324956 0.548302 0.462414 0.592895 0.672949 0.489518 0.702771 0.482243 0.731565 0.451567 0.742557 0.553507 0.553025 0.365652 0.792116 0.244807 0.682962 0.480942 0.615514 0.547908 0.511771 0.555515 0.658237 0.555516 0.86914 0.525816 0.65824 0.525817 0.869142 0.27972 0.987482 0.130589 0.838352 0.289855 0.977347 0.140725 0.828217 0.598174 0.840183 0.597726 0.854509 0.568489 0.839256 0.568042 0.853582 0.905299 0.862963 0.707813 0.936985 0.900268 0.849542 0.598174 0.840183 0.808974 0.846766 0.597726 0.854509 0.489518 0.702771 0.503414 0.706282 0.482243 0.731565 0.496139 0.735076 0.222278 0.574049 0.224335 0.352913 0.23661 0.574182 0.238658 0.574201 0.240716 0.353065 0.694064 0.881279 0.694064 0.881279 0.694064 0.881279 0.482243 0.731565 0.487768 0.746986 0.451567 0.742557 0.224917 0.340437 0.210458 0.332737 0.240232 0.311675 0.176753 0.693156 0.19979 0.67011 0.333128 0.849529 0.356164 0.826484 0.530691 0.915212 0.525911 0.899543 0.561857 0.905704 0.480462 0.910645 0.475682 0.894977 0.511629 0.901137 0.510994 0.810901 0.348916 0.961356 0.499849 0.798895 0.284568 0.9429 0.134113 0.780822 0.296573 0.931755 0.855802 0.528262 0.89067 0.534766 0.733051 0.710051 0.763259 0.7143 0.907592 0.547201 0.771776 0.723028 0.89067 0.534766 0.763259 0.7143 0.319294 0.883371 0.335768 0.875075 0.330867 0.909944 0.855802 0.528262 0.85854 0.511901 0.89067 0.534766 0.726203 0.889093 0.933224 0.812251 0.731906 0.904475 0.855802 0.528262 0.733051 0.710051 0.839442 0.525521 0.763259 0.7143 0.771776 0.723028 0.733051 0.710051 0.73887 0.725638 0.680365 0.876712 0.681004 0.893081 0.469617 0.884934 0.56621 0.789954 0.777597 0.798107 0.566928 0.808369 0.777677 0.800153 0.694064 0.86758 0.694064 0.86758 0.694064 0.86758 0.577613 0.922538 0.577613 0.90411 0.607306 0.922538 0.607306 0.90411 0.455005 0.894525 0.468037 0.907556 0.434005 0.915525 0.447036 0.928556 0.301649 0.873323 0.152516 0.724185 0.322648 0.852322 0.17352 0.703196 0.507485 0.766767 0.351955 0.909203 0.495038 0.753176 0.808059 0.82663 0.597365 0.817372 0.808868 0.808219 0.230464 0.591269 0.231103 0.646248 0.2162 0.620566 0.159817 0.762557 0.299602 0.909979 0.182719 0.812544 0.907592 0.547201 0.912463 0.810115 0.771776 0.723028 0.568108 0.744928 0.75157 0.599444 0.610648 0.656917 0.658786 0.410026 0.618633 0.308875 0.685419 0.396948 0.96635 0.316752 0.888799 0.394854 0.778185 0.586374 0.880721 0.525571 0.971208 0.460518</float_array>
+          <technique_common>
+            <accessor source="#SketchUp1-texcoords-array" count="372" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="SketchUp1-vertices">
+          <input semantic="POSITION" source="#SketchUp1-positions"/>
+        </vertices>
+        <triangles material="ID25" count="16">
+          <input semantic="VERTEX" source="#SketchUp1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#SketchUp1-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#SketchUp1-texcoords" offset="1"/>
+          <p>0 0 1 1 2 2 3 3 2 2 1 1 0 4 2 5 4 6 5 7 4 6 2 5 3 8 1 9 6 10 7 11 6 10 1 9 7 12 4 13 6 14 5 15 6 16 4 17 8 18 9 19 10 20 11 21 10 20 9 19 8 22 10 23 12 24 13 25 12 26 10 27 11 28 9 29 14 30 15 31 14 32 9 33 15 34 12 35 14 36 13 37 14 36 12 35</p>
+        </triangles>
+        <triangles material="ID34" count="94">
+          <input semantic="VERTEX" source="#SketchUp1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#SketchUp1-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#SketchUp1-texcoords" offset="1"/>
+          <p>1 38 4 39 0 40 4 39 1 38 7 41 11 42 2 43 14 44 2 43 11 42 10 45 2 43 10 45 3 46 5 47 14 44 2 43 14 44 5 47 13 48 13 48 5 47 6 49 13 48 6 49 10 45 3 46 10 45 6 49 9 50 10 51 11 52 10 51 9 50 8 53 10 54 12 55 13 56 12 57 10 58 8 59 9 60 14 61 15 62 14 63 9 64 11 65 12 66 14 67 13 68 14 67 12 66 15 69 1 70 2 71 3 72 2 71 1 70 0 73 2 74 4 75 5 76 4 75 2 74 0 77 1 78 6 79 7 80 6 79 1 78 3 81 4 82 6 83 5 84 6 83 4 82 7 85 8 86 16 87 12 88 16 87 8 86 17 89 17 90 8 91 18 92 12 88 16 87 19 93 20 94 19 93 16 87 12 88 21 95 22 96 21 95 12 88 19 93 22 96 21 95 23 97 22 96 23 97 18 98 17 90 18 92 24 99 24 100 18 101 23 102 23 102 20 103 24 100 25 104 26 105 27 106 26 105 25 104 28 107 20 108 27 109 26 110 27 109 20 108 16 111 17 112 27 113 16 114 27 113 17 112 25 115 17 116 28 117 25 118 28 119 17 120 24 121 28 122 20 123 26 124 20 123 28 122 24 125 19 126 29 127 30 128 29 127 19 126 26 129 26 129 19 126 20 130 29 131 23 132 31 133 23 134 29 135 20 136 20 137 29 138 26 139 29 140 32 141 30 142 32 141 29 140 31 143 19 144 32 145 21 146 32 147 19 148 30 149 23 150 32 151 31 152 32 153 23 154 21 155 33 156 34 157 35 158 34 157 33 156 36 159 37 160 33 161 35 162 33 161 37 160 38 163 33 164 39 165 36 166 39 165 33 164 38 167 39 168 34 169 36 170 34 169 39 168 40 171 37 172 34 173 40 174 34 173 37 172 35 175 34 176 41 177 42 178 41 177 34 176 43 179 43 180 34 181 40 182 40 183 44 184 45 185 44 184 40 183 42 186 42 187 40 188 34 189 41 190 46 191 47 192 46 191 41 190 43 193 42 194 47 195 44 196 47 195 42 194 41 197 46 198 44 199 47 200 44 201 46 202 45 203 39 204 43 205 40 206 38 207 9 208 39 209 15 210 43 205 39 204 15 210 39 204 9 211 15 210 46 212 43 205 48 213 46 212 15 210 46 212 48 213 45 214 49 215 37 216 48 217 45 218 48 219 37 220 40 221 45 222 37 223 37 216 49 215 38 224 38 224 49 215 9 225</p>
+        </triangles>
+        <triangles material="ID5" count="70">
+          <input semantic="VERTEX" source="#SketchUp1-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#SketchUp1-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#SketchUp1-texcoords" offset="1"/>
+          <p>7 226 1 227 4 228 0 229 4 228 1 227 16 230 19 231 20 232 19 231 16 230 12 233 17 234 8 235 16 230 12 233 16 230 8 235 19 231 12 233 21 236 22 237 21 236 12 233 23 238 21 236 22 237 18 239 23 238 22 237 24 240 20 241 23 242 23 242 18 243 24 240 24 244 18 245 17 246 18 245 8 247 17 246 28 248 25 249 26 250 27 251 26 250 25 249 16 252 20 253 27 254 26 255 27 254 20 253 25 256 17 257 27 258 16 259 27 258 17 257 24 260 17 261 28 262 25 263 28 264 17 265 24 266 28 267 20 268 26 269 20 268 28 267 20 270 19 271 26 272 26 272 19 271 29 273 30 274 29 273 19 271 26 275 29 276 20 277 20 278 29 279 23 280 31 281 23 282 29 283 31 284 29 285 32 286 30 287 32 286 29 285 30 288 19 289 32 290 21 291 32 292 19 293 21 294 23 295 32 296 31 297 32 298 23 299 36 300 33 301 34 302 35 303 34 302 33 301 38 304 37 305 33 306 35 307 33 306 37 305 38 308 33 309 39 310 36 311 39 312 33 313 40 314 39 315 34 316 36 317 34 318 39 319 35 320 37 321 34 322 40 323 34 322 37 321 40 324 34 325 43 326 43 327 34 328 41 329 42 330 41 329 34 328 34 331 40 332 42 333 42 334 40 335 44 336 45 337 44 336 40 335 43 338 41 339 46 340 47 341 46 340 41 339 41 342 42 343 47 344 44 345 47 344 42 343 45 346 46 347 44 348 47 349 44 350 46 351 37 352 45 353 40 354 37 355 48 356 45 357 38 358 49 359 37 360 48 361 37 360 49 359 45 362 48 363 46 364 15 365 46 364 48 363 43 366 46 364 15 365 9 367 39 368 15 365 39 368 43 366 15 365 40 369 43 366 39 368 39 370 9 371 38 358 9 371 49 359 38 358</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="DefaultScene">
+      <node id="SketchUp" name="SketchUp" type="NODE">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#SketchUp1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="ID25" target="#ID25"/>
+              <instance_material symbol="ID34" target="#ID34"/>
+              <instance_material symbol="ID5" target="#ID5"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra type="pivot_use">
+          <technique profile="ADOBE">
+            <use_pivot>
+              <needPivot>0</needPivot>
+            </use_pivot>
+          </technique>
+        </extra>
+      </node>
+      <node id="Infinite_Light_1" name="Infinite_Light_1" type="NODE">
+        <lookat>0 0 0 -0.074319 -0.592357 -0.800132 0 1 0</lookat>
+        <instance_light url="#Infinite_Light_2"/>
+      </node>
+      <node id="Image_Based_Light_1" name="Image_Based_Light_1" type="NODE">
+        <instance_light url="#Image_Based_Light_2"/>
+      </node>
+      <node id="Default_Camera" name="Default_Camera" type="NODE">
+        <lookat>2.60709 0.06826 21.1458 2.60709 0.068261 17.0982 0 1 0</lookat>
+        <instance_camera url="#Default_Camera1"/>
+      </node>
+      <extra type="render_settings">
+        <technique profile="ADOBE">
+          <faces>
+            <render_faces>1</render_faces>
+            <face_style>4</face_style>
+            <face_color>1 1 1</face_color>
+            <texture_type>0</texture_type>
+            <anti_alias_quality>1</anti_alias_quality>
+            <show_reflections>1</show_reflections>
+            <show_refractions>1</show_refractions>
+            <show_shadows>1</show_shadows>
+            <remove_backfaces>0</remove_backfaces>
+          </faces>
+          <edges>
+            <render_edges>0</render_edges>
+            <line_style>1</line_style>
+            <line_color>0 0 0</line_color>
+            <line_width>1</line_width>
+            <crease_value>0</crease_value>
+            <remove_backface_lines>0</remove_backface_lines>
+            <remove_hidden_lines>1</remove_hidden_lines>
+          </edges>
+          <vertices>
+            <render_vertices>0</render_vertices>
+            <vertex_style>1</vertex_style>
+            <vertex_color>0 0 0</vertex_color>
+            <vertex_radius>1</vertex_radius>
+            <remove_backface_vertices>0</remove_backface_vertices>
+            <remove_hidden_vertices>1</remove_hidden_vertices>
+          </vertices>
+          <volumes>
+            <render_volume>0</render_volume>
+            <volume_style>2097152</volume_style>
+            <transfer_function0/>
+            <transfer_function1/>
+            <transfer_function2/>
+            <transfer_function3/>
+            <gradient_enhancement>1</gradient_enhancement>
+            <opacity_scale>1</opacity_scale>
+          </volumes>
+          <stereo>
+            <render_stereo>0</render_stereo>
+            <stereo_style>16384</stereo_style>
+            <stereo_offset>5</stereo_offset>
+            <stereo_line_spacing>40</stereo_line_spacing>
+          </stereo>
+          <internal>
+            <projection>0</projection>
+            <blend_unlit>0</blend_unlit>
+          </internal>
+        </technique>
+      </extra>
+      <extra type="background_image_type">
+        <technique profile="ADOBE">
+          <type>
+            <image_type>0</image_type>
+          </type>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#DefaultScene"/>
+  </scene>
+</COLLADA>
