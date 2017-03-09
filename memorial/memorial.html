@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head>
 
-    <title>2D—Web</title>
+    <title>ScrollBar</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,21 +13,33 @@
  <script><body onLoad="window.scroll(1000, 1000)"></script>
  
     <style>
+   
+     @font-face {
+    font-family: Menlo;monospaced
+    src: url(assets/Menlo-Regular.ttf);
+    }
+    
     body{background: -webkit-radial-gradient(red, yellow, green);
-width:500em;
-height:500em;
+width:200em;
+height:200em;
 }
-::-webkit-scrollbar { 
+
+body::-webkit-scrollbar { 
     display: none; 
 }
+
+	#ev{position:absolute; top:10em; right:10em; width:5em;overflow-x: scroll;}
+
    #header{position:fixed;
    top:0px; left:50vw; z-index:9999999999; color:#0000ff;}
-div{position:absolute; top:250em; left:250em;}</style>
+   
+#canvas{position:absolute; top:70em; left:70em;}</style>
 
 </head>
 <body>
-	
-	<h1 id="header">In memorial of the scrollbar</h1>
+<div id="canvas"></div>
+	<div id="ev"><img src="evolution.png"/></div>
+	<h1 id="header">In memory of the scrollbar</h1>
     <script>
 
         if (!Detector.webgl) {
@@ -48,8 +60,8 @@ div{position:absolute; top:250em; left:250em;}</style>
 
         function init() {
 
-            container = document.createElement('div');
-            document.body.appendChild(container);
+       container = document.getElementById( 'canvas' );
+document.body.appendChild( container );
 
             /* Camera */
 
