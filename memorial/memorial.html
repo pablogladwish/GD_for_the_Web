@@ -20,25 +20,41 @@
     }
     
     body{background:black; /*-webkit-radial-gradient(red, yellow, green);*/
-width:200em;
-height:200em;
+width:100em;
+height:100em;
 }
 
 body::-webkit-scrollbar { 
     display: none; 
 }
 
-	#ev{position:relative; top:0em; left:10em; width:5em;overflow-x: scroll;}
-	#narr{font-family: Menlo;monospaced; color:white;position:absolute; bottom:0em; right:0em; width:20em; height:2.25em; overflow-y:scroll; z-index:999999;}
+	#ev{position:absolute; top:0em; left:10em; width:5em;overflow-x: scroll;z-index:999999;}
+	#narr{font-family: Menlo;monospaced; color:white;position:absolute; top:10em; left:15em; width:20em; height:2.25em; overflow-y:scroll; z-index:999999;}
 
    #header{font-family: Menlo;monospaced; position:fixed;
    top:0px; left:50vw; z-index:9999999999; color:white;}
-   
-#canvas{position:absolute; top:70em; left:70em;}</style>
+   #s{position:absolute; top:0em; left:1em; font-family: Menlo;monospaced; font-size:50em; color:white; 
+   overflow-y: scroll; height:1em; width:100px; z-index:999999;}
+#s::-webkit-scrollbar{width:5em;
+}
+ 
+#s::-webkit-scrollbar-track { 
+ background-color:#bcbcbc;
+}
+ 
+#s::-webkit-scrollbar-thumb {
+   background-color:#bcbcbc;
+   border-right:black;
+    border-bottom:black;
+    border-left:white;
+    border-top:white;
+     border-width: 20px;
+    border-style:solid; }
+#canvas{position:absolute; top:7em; left:7em;}</style>
 
 </head>
 <body>
-<div id="canvas"></div>
+<div id="canvas"></div><div><p id=s>s</p></div>
 	<div id="ev"><img src="evolution.png"/></div>
 	<h1 id="header">In memory of the scrollbar</h1>
    <div id="narr"><p>The scrollbar was the best solution for displaying and interacting with content larger 
