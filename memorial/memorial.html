@@ -19,7 +19,7 @@
     src: url(assets/Menlo-Regular.ttf);
     }
     
-    body{background: -webkit-radial-gradient(red, yellow, green);
+    body{background:black; /*-webkit-radial-gradient(red, yellow, green);*/
 width:200em;
 height:200em;
 }
@@ -28,10 +28,11 @@ body::-webkit-scrollbar {
     display: none; 
 }
 
-	#ev{position:absolute; top:10em; right:10em; width:5em;overflow-x: scroll;}
+	#ev{position:relative; top:0em; left:10em; width:5em;overflow-x: scroll;}
+	#narr{font-family: Menlo;monospaced; color:white;position:absolute; bottom:0em; right:0em; width:20em; height:2.25em; overflow-y:scroll; z-index:999999;}
 
-   #header{position:fixed;
-   top:0px; left:50vw; z-index:9999999999; color:#0000ff;}
+   #header{font-family: Menlo;monospaced; position:fixed;
+   top:0px; left:50vw; z-index:9999999999; color:white;}
    
 #canvas{position:absolute; top:70em; left:70em;}</style>
 
@@ -40,6 +41,16 @@ body::-webkit-scrollbar {
 <div id="canvas"></div>
 	<div id="ev"><img src="evolution.png"/></div>
 	<h1 id="header">In memory of the scrollbar</h1>
+   <div id="narr"><p>The scrollbar was the best solution for displaying and interacting with content larger 
+   than the viewport. However with the greater and greater knowledge of how content on screen 
+   works the scrollbar was just to help you navigate the content, but then again the use of scroll 
+   functions on mouses and trackpads, which are generally more fluid and intuitive than scrollbars, 
+   means that the scrollbar has shrunk down into a grey bar on the side of your screen a residual smudge 
+   on your screen waiting to be wiped away in the next update.</p></div>
+   
+   
+   
+   
     <script>
 
         if (!Detector.webgl) {
