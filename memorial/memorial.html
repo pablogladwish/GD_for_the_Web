@@ -10,7 +10,7 @@
     <script src="OrbitControls.js"></script>
     <script src="OBJLoader.js"></script>
     <script src="MTLLoader.js"></script>
- <script><body onLoad="window.scroll(1000, 1000)"></script>
+<body onLoad="window.scroll(1000, 1000)">
  
     <style>
    
@@ -18,53 +18,54 @@
     font-family: Menlo;monospaced
     src: url(assets/Menlo-Regular.ttf);
     }
-    
-    body{background:black; /*-webkit-radial-gradient(red, yellow, green);*/
-width:100em;
-height:100em;
+   
+    body{background:black;/*-webkit-radial-gradient(red, yellow, green);*/
+width:150em;
+height:150em;
 }
 
 body::-webkit-scrollbar { 
     display: none; 
 }
 
-	#ev{position:absolute; top:0em; left:10em; width:5em;overflow-x: scroll;z-index:999999;}
-	#narr{font-family: Menlo;monospaced; color:white;position:absolute; top:10em; left:15em; width:20em; height:2.25em; overflow-y:scroll; z-index:999999;}
+	#ev{position:absolute; top:70em; left:25em; width:5em;overflow-x: scroll;z-index:999999;cursor:e-resize;}
+	#narr{font-family: Menlo;monospaced; color:white;position:absolute; top:50em; left:32em; width:20em; height:2.2em; overflow-y:scroll; z-index:999999;cursor:s-resize;font-size:2em;}
 
    #header{font-family: Menlo;monospaced; position:fixed;
    top:0px; left:50vw; z-index:9999999999; color:white;}
-   #s{position:absolute; top:0em; left:5em; font-family: Menlo;monospaced; font-size:10em; background:white; 
-   overflow-y: scroll;overflow-x: hidden; height:01em; width:100px; z-index:999999;}
-#s::-webkit-scrollbar{width:4em;
-}
+   
+   #s{position:absolute; top:0em; right:-5em; font-family: Menlo;monospaced; font-size:10em; background:white; 
+   overflow-y: scroll;overflow-x: hidden; height:10em; width:-230px; z-index:999999;cursor:s-resize;}
+
+#s::-webkit-scrollbar{width:244px;
+cursor:s-resize;}
  
 #s::-webkit-scrollbar-track { 
- background-color:#bcbcbc;
-}
+ background:-webkit-linear-gradient(top,white,black);
+cursor:s-resize;}
  
 #s::-webkit-scrollbar-thumb {
-   background-color:#bcbcbc;
-   border-right:black;
-    border-bottom:black;
-    border-left:white;
-    border-top:white;
-     border-width: 20px;
-    border-style:solid; }
-#canvas{position:absolute; top:7em; left:7em;}</style>
+   background:url("assets/tombstone.png");
+   cursor:s-resize;}
+   
+#leaves{position:absolute; top:93em; right:-65em;z-index:999999; width:50%;}
+   
+#canvas{position:absolute; top:7em; left:13em;cursor:pointer;}</style>
 
 </head>
 <body>
-<div id="canvas"></div><div><p id=s>s</p></div>
+<div id="canvas"></div><div><p id=s>s<br>c<br>r<br>o<br>l<br>l<br>b<br>a<br>r<br>s<br>c<br>r<br>o<br>l<br>l<br>b<br>a<br>r<br>s<br>c<br>r<br>o<br>l<br>l<br>b<br>a<br>r<br>s<br>c<br>r<br>o<br>l<br>l<br>b<br>a<br>r<br>o<br>l<br>l<br>b<br>a<br>r<br>o<br>l<br>l<br>b<br>a<br>r<br>o<br>l<br>l<br>b<br>a<br>r
+<br>o<br>l<br>l<br>b<br>a<br>r</p></div>
 	<div id="ev"><img src="evolution.png"/></div>
-	<h1 id="header">In memory of the scrollbar</h1>
-   <div id="narr"><p>The scrollbar was the best solution for displaying and interacting with content larger 
+	<h1 id="header">In loving memory of the scrollbar</h1>
+   <div id="narr"><p>The scrollbar was the best <br>solution for displaying and interacting with content larger 
    than the viewport. However with the greater and greater knowledge of how content on screen 
    works the scrollbar was just to help you navigate the content, but then again the use of scroll 
    functions on mouses and trackpads, which are generally more fluid and intuitive than scrollbars, 
    means that the scrollbar has shrunk down into a grey bar on the side of your screen a residual smudge 
    on your screen waiting to be wiped away in the next update.</p></div>
    
-   
+   <img id="leaves" src="assets/leaves.png"/>
    
    
     <script>
@@ -154,7 +155,7 @@ scene.add(backLight);
 
             renderer = new THREE.WebGLRenderer();
             renderer.setPixelRatio(window.devicePixelRatio);
-            renderer.setSize(1000, 1000);
+            renderer.setSize(800, 800);
             renderer.setClearColor(new THREE.Color("#000000"));
 
             container.appendChild(renderer.domElement);
