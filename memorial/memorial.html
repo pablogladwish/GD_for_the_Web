@@ -66,18 +66,77 @@ body::-webkit-scrollbar {
  
 #s::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 80px rgba(0,0,0,3); 
  background:-webkit-linear-gradient(top,white,black);
- 
-cursor:s-resize;}
+ cursor:s-resize;}
+
+#no1{width:40px;Height:4em;font-size:10em; position:absolute; top:10.34em; left:2em;overflow-y:scroll;overflow-x:hidden; z-index:999999;
+-ms-transform: rotate(102deg); /* IE 9 */
+    -webkit-transform: rotate(102deg); /* Safari */
+    transform: rotate(102deg);}
+
+#no2{width:100px;Height:3em;font-size:10em; position:absolute; top:1.5em; left:13em;overflow-y:scroll;overflow-x:hidden; z-index:999999;
+border:5px #bcbcbc;
+-ms-transform: rotate(-2deg); /* IE 9 */
+    -webkit-transform: rotate(-2deg); /* Safari */
+    transform: rotate(-2deg);}
+
+
 #s::-webkit-scrollbar-thumb {
     display: block;
    background:url("assets/scrol.png");
-   
     background-size:25.2%;  
     background-position:;
    cursor:s-resize;}
 
 img{height:100%;width:auto;}
 
+#no1::-webkit-scrollbar{width:40px;
+}
+
+
+#no1::-webkit-scrollbar-track { 
+ 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border:3px #bcbcbc;
+	background-color: #F5F5F5;
+	}
+#no1::-webkit-scrollbar-thumb {
+  
+	background-color: #b5b5b5;
+	border-radius:50px;
+	 border-right:#F5F5F5;
+    border-bottom:#F5F5F5;
+    border-left:#F5F5F5;
+    border-top:#F5F5F5;
+	border-width:3px;
+	border-style:solid;}
+
+
+#no2::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 9px rgba(0,0,0,1);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+#no2::-webkit-scrollbar
+{
+	width: 40px;
+	background-color: #F5F5F5;
+}
+
+#no2::-webkit-scrollbar-thumb
+{
+	background-color: #0000FF;
+	border-radius: 10px;
+	background-image: -webkit-linear-gradient(0deg,
+	                                          rgba(255, 255, 255, 0.5) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, 0.5) 50%,
+											  rgba(255, 255, 255, 0.5) 75%,
+											  transparent 75%,
+											  transparent)
+}
+}
 
  #ev::-webkit-scrollbar{width:24px;
 cursor:s-resize;}
@@ -93,6 +152,17 @@ cursor:s-resize;}
     border-top:white;
      border-width: 3px;
     border-style:solid; }
+    ul{position:absolute; top:50em; left:9em;list-style: none;}
+    li{font-size:10em;color:white; z-index:99999999; 
+    -webkit-text-stroke-width: 5px;
+   -webkit-text-stroke-color: #bcbcbc;-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+            cursor:default;}
+    li:hover{color:gray;}
     
     #draggable {width:336px; height:264px; top:4.5em; left:2.7em; cursor:crosshair;z-index:99999;
      -ms-transform: rotate(-2deg); 
@@ -139,7 +209,12 @@ l<br>l<br>b<br>a<br>r<br>o<br>l<br>l<br>b<br>a<br>r<br>o<br>l<br>l<br>b<br>a<br>
   
    <img id="draggable" src="assets/desktoplisa.png"/>
    <img id="lisa"src="assets/lisa.jpeg"/>
+   <p id="no1">s<br>c<br>r<br>o<br>l<br>l<br></p> <p id="no2">s<br>c<br>r<br>o<br>l<br>l<br>s<br>c<br>r<br>o<br>l<br>l<br>s<br>c<br>r<br>o<br>l<br>l<br></p>
    <div id="canvas"></div>
+    
+    <ul><li>•</li><li>•</li><li>•</li>
+    </ul>
+    
     <script>
 
         if (!Detector.webgl) {
@@ -167,8 +242,8 @@ document.body.appendChild( container );
 
             camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 100000);
             camera.position.z = 0;
-            camera.position.y = 10;
-             camera.position.x = 2;
+            camera.position.y = 4;
+             camera.position.x = -2;
              /*camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
     camera.position.z = 1000;*/
 
@@ -227,7 +302,7 @@ scene.add(backLight);
 
             renderer = new THREE.WebGLRenderer();
             renderer.setPixelRatio(window.devicePixelRatio);
-            renderer.setSize(1800, 1800);
+            renderer.setSize(1200, 1200);
             renderer.setClearColor(new THREE.Color("#000000"));
 
             container.appendChild(renderer.domElement);
