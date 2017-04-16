@@ -16,14 +16,27 @@
     a{ font-family:Arial, Helvetica, sans-serif; color:blue; text-decoration:none;
     font-family: Georgia,Times,Times New Roman,serif; font-weight: bold; padding-right:3vw;}
     #nav{text-align:justify;
-   
     width:70vw; margin:auto;}
     
+    #HCB_comment_box {z-index:100;padding:100px;}
     
+     .parallax {
+    background-color:#f9d6f6;
+    /* Set a specific height */
+    height: 150vh; 
+    width:700px;
+    position:fixed;
+    top:-20vw;
+    left:-24vw;
+    -ms-transform: rotate(-15deg); /* IE 9 */
+    -webkit-transform: rotate(-15deg); /* Safari */
+    transform: rotate(-15deg);
+overflow:none;}
     </style>
    
     </head>
     <body>
+    <div class="parallax"></div>
     <img id="header"src="微信-01.svg"/>
     
      <div id="container">
@@ -331,8 +344,20 @@ Capitalism</li>
 <li>右派
 The Right</li>
 </ol>     
-     
+    <!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24kOLsi6j4e%2FFLsjMq4AAR41"+"&opts=16775&num=10&ts=1492379119310");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
      </div>
+    
+    <form action="/html/tags/html_form_tag_action.cfm" method="post">
+    <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+Hey... say something!
+</textarea>
+</div>
+<input type="submit" value="Submit">
+</form>
     
      
     
