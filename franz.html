@@ -3,28 +3,44 @@
 
 <head>
   <title>Pablo</title>
+    
   <style>
-      body{overflow-y:hidden;}
+      body{overflow-y:hidden; background: black;}
       ::-webkit-scrollbar { 
     display: none; 
+          
 }
-      #container{width:1000px; margin:auto; background:yellow;overflow-y:hidden;}
+      img{width:100%; height: auto;}
+      p{color:white; font-family: Arial, Helvetica, sans-serif; text-align: center;}
+      #gradient{position:absolute; bottom:0px; width:100%; height: 100px;
+    background: -webkit-linear-gradient(top, rgba(255,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,1), rgba(0,0,0,1); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgba(255,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,1), rgba(0,0,0,1))); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, rgba(255,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,1), rgba(0,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,1), rgba(0,0,0,1)); /* Standard syntax (must be last) */
+      z-index: 999999;}
+      
+      #container{width:1000px; margin:auto; overflow-y:hidden;}
      
-      #pic{position:relative; width:400px; height:670px; overflow-y: scroll; float:left; background: blue;
+      #pic{position:relative; width:400px; height:670px; overflow-y: scroll; float:left; 
 }
-      .visuals {width:400px; height:300px; background:black; margin-bottom:20px;}
+      .visuals {width:400px;   margin-bottom:10px; margin-top:13px;}
       
-      h1{font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 27px; background: blue;}
+      h1{font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 27px; color: white;}
       
-      #text {width:500px; position:relative; top:-90px; left:60px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 27px; line-height: 120%; height:95vh; overflow-y: scroll; z-index: 999; background: blue;}
+      #text {width:500px; position:relative; top:-90px; left:60px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 27px; color: white;line-height: 120%; height:95vh; overflow-y: scroll; z-index: 999; }
     </style>
   <meta charset="utf-8" />
 </head>
 
     <body><div id="container"><H1>Designing With Light</H1><H1>Designing With Light</H1>
-    <div id="pic"><div class="visuals"></div><div class="visuals"></div><div class="visuals"></div><div class="visuals"></div></div>
     
-        <div id="text">Hello,
+        <div id="pic"><p>Examples from book</p><div class="visuals"><img src="img/Boesch.1.jpg"/></div><hr>
+    <div class="visuals"><img src="img/TM_Photo.jpeg"/></div><hr>
+            <div class="visuals"><img src="img/VeniVidiVici.jpg"/></div><hr>
+        <div class="visuals"></div></div>
+    
+        
+        <div id="text"><hr>Hello,
 
 My name is Franz Werner and I am looking for supporters to participate in my crowdfunding project for my publication “Designing with Light” which contains student work of my classes which I have been teaching since the early 80’s at the Rhode Island School of Design.
 <br><br>
@@ -41,8 +57,30 @@ This book is a tribute to my students but also to my teachers <br>…
 <br>
 I had the opportunity to study with the creme de la creme although I'm not nearly accomplished as my teachers but I always felt an obligation to share. Therefore, my contribution will be to in form of workshops to High Schools, Community Colleges, and the less fortunate.
 
-I would like to close by citing Einstein's quote: "imagination is more important than knowledge”
+I would like to close by citing Einstein's quote: "imagination is more important than knowledge”<br><br><br>
  </div> </div>
-    
-    
+   <!-- <div id="gradient"></div>-->
+   <!-- <script>$('#text').on('scroll', function () {
+    $('#pic').scrollTop($(this).scrollTop());
+});</script>-->
+     <script>   var isSyncingLeftScroll = false;
+var isSyncingRightScroll = false;
+var leftDiv = document.getElementById('pic');
+var rightDiv = document.getElementById('text');
+
+leftDiv.onscroll = function() {
+  if (!isSyncingLeftScroll) {
+    isSyncingRightScroll = true;
+    rightDiv.scrollTop  = this.scrollTop;
+  }
+  isSyncingLeftScroll = false;
+}
+
+rightDiv.onscroll = function() {
+  if (!isSyncingRightScroll) {
+    isSyncingLeftScroll = true;
+    leftDiv.scrollTop = this.scrollTop;
+  }
+  isSyncingRightScroll = false;
+}</script>
     </body></html>
