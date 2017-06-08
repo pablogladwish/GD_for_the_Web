@@ -5,11 +5,11 @@
   <title>Pablo</title>
     
   <style>
-      body{overflow-y:hidden; background: black;}
+      body{overflow-y:hidden;overflow-x:hidden; background: black;}
       ::-webkit-scrollbar { 
     display: none; 
           
-}
+      }   #lol{position:relative;top: 0px;}
       #blocking{position:relative; width:400px; height:200px; float:left; background: black; z-index: 99999;}
       img{width:100%; height: auto;}
       p{color:white; font-family: Arial, Helvetica, sans-serif; text-align: center;}
@@ -24,7 +24,7 @@
      
       #pic{position:relative; top:-520px;  width:400px; height:1300px; overflow-y: scroll; float:left; 
 }
-      .visuals {width:400px;   margin-bottom:10px; margin-top:13px;
+      .visuals { position: relative; width:400px;   margin-bottom:10px; margin-top:13px;
       }
       
       h1{font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-stretch:condensed; font-size:40px; color: white;}
@@ -58,32 +58,17 @@ I had the opportunity to study with the creme de la creme although I'm not nearl
 
 I would like to close by citing Einstein's quote: "imagination is more important than knowledge”<br><br><br>
             
-My name is Franz Werner and I am looking for supporters to participate in my crowdfunding project for my publication “Designing with Light” which contains student work of my classes which I have been teaching since the early 80’s at the Rhode Island School of Design.
-<br><br>
-In order to maintain freedom and integrity for my publication I chose self-publishing which requires independent financing for high quality printing and binding of this hard cover book. 
-<br><br>
-The book contains 00 projects all the way from the wet photography method to the digital videography accompanied by diagrams explaining the process involved. 
 
-I want to make this work public
-To democratize art
-
-This book will be a wonderful inspiration for anybody who appreciates art and design and to get connected with form and function. 
-<br><br>
-This book is a tribute to my students but also to my teachers <br>…
-<br>
-I had the opportunity to study with the creme de la creme although I'm not nearly accomplished as my teachers but I always felt an obligation to share. Therefore, my contribution will be to in form of workshops to High Schools, Community Colleges, and the less fortunate.
-
-I would like to close by citing Einstein's quote: "imagination is more important than knowledge”<br><br><br>
  </div> 
         
         
-        <div id="pic"><br><br><br><p>Examples from book</p><div class="visuals"><img src="img/franz_werner_pdf_Page_018%20spread.jpg"/>
+        <div id="pic"><div id='lol'><p >Examples from book</p><div class="visuals"><img src="img/franz_werner_pdf_Page_018%20spread.jpg"/>
 </div><div class="visuals"><img src="img/Boesch.1.jpg"/></div><hr>
     <div class="visuals"><img src="img/TM_Photo.jpeg"/></div><hr>
             <div class="visuals"><img src="img/VeniVidiVici.jpg"/></div><hr>
        <div class="visuals"><img src="img/TM_Photo.jpeg"/></div><hr>
             <div class="visuals"><img src="img/VeniVidiVici.jpg"/></div><hr>
-        </div></div>
+            </div></div></div>
    
         
         
@@ -113,7 +98,7 @@ rightDiv.onscroll = function() {
         <script>
             $('#text').scroll(function () { 
 
-   $('#pic').css({
+   $('#lol').css({
       'top' : -($(this).scrollTop()/0.99)+"px"
    }); 
 
