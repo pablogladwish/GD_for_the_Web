@@ -10,23 +10,21 @@
       ::-webkit-scrollbar { 
     display: none; 
       }   
-      #clips{height:100%;
-      z-index: 99999999; position: fixed; right: 0px; background: rgba(255,255,255,.5) ;}
-      .closebtn{left:0px;}   
+     
       
       #links{position: fixed;
-      right: 0px; }
+      right: 10px; top:10px;}
       
       .sidenav {
-  
+    height: 100%;
     width: 0; 
     position: fixed; 
           z-index: 99999999;
     z-index: 999;
-    position: fixed; right: 0px; background: rgba(255,255,255,.5);
+    position: fixed; right: 0px; background: rgba(255,255,255,.9);
     
     overflow-x: hidden; 
-    padding-top: 30px; 
+    padding-top: 0px; 
 	transition: 0.5s;}
       
       @font-face {
@@ -38,15 +36,20 @@
     src: url(img/Gotham-Light.otf);
       font-weight:light;}
       #lol{position:relative;top: 0px;}
-      #rewards{width: 500px;height: 200px;background: rgba(255,255,255,.5) ; color: blue;}
+      
+      #rewards{width: 500px;height: 200px; color: blue;}
+      
       .poster{width: 240px; height: auto; margin-left: 10px; float: left;font-weight:normal;background: rgba(255,255,255,.5) ;}
-      #blocking{position:relative; width:400px; height:85px; float:left; background: rgba(255,255,255,.5); padding: 5px; z-index: 99999; padding: 5px;}
+      #blocking img{height:100%; width: auto; margin-left: 92.125px;}
+      #blocking{position:relative; width:380px; height:85px; float:left; background: rgba(0,0,255,.5); padding: 50px; z-index: 99999; padding: 5px; margin:10px;}
+      
       img{width:100%; height: auto;}
-      p{color:white; font-family:  gothamial, sans-serif; text-align: center; font-weight: normal; font-size: 20px; margin-bottom:15px; margin-top: 0px;}
+     
+      p{color:white; font-family:gotham, sans-serif; text-align: center; font-weight: normal; font-size: 20px; margin-bottom:15px; margin-top: 0px;}
       
       .pull{font-family: gotham, sans-serif; text-align: left; font-weight:light; font-size:33px;background: rgba(255,255,255,.5) ; color:blue;}
       
-      #container{width:1000px; margin:auto; overflow-y:hidden;  top: ; background: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(255,255,255,.5)); 
+      #container{width:1000px; margin:auto; overflow-y:hidden;  top:0px; background: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(255,255,255,.5)); 
     background: -o-linear-gradient(top, rgba(0,0,0,0), rgba(255,255,255,.7)); 
     background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(255,255,255,.7));
     background: linear-gradient(to top, rgba(0,0,0,0), rgba(255,255,255,.7)); ; }
@@ -58,8 +61,8 @@
       
       h1{font-family: 'Roboto Condensed', sans-serif; text-align: CENTER; font-weight:bold;; font-stretch:condensed; font-size:46px; color: blue; background: rgba(255,255,255,.5) ;}
       
-      
-      #text {width:500px; position:relative; top:0px; left:60px; font-family:gotham,sans-serif; font-weight: bold; font-size: 25px; color: white;line-height: 120%; height:100vh; overflow-y: scroll; z-index: 999; float:left; background: rgba(255,255,255,.5);padding: 5px; padding-left: 5px;}
+       
+      #text {width:500px; position:relative; top:0px; left:60px; font-family:gotham,sans-serif; font-weight: bold; font-size: 25px; color: white;line-height: 120%; height:100vh; overflow-y: scroll; z-index: 999; float:left; background: rgba(255,255,255,.4);padding: 5px; padding-left: 5px;}
     </style>
   <meta charset="utf-8" />
 </head>
@@ -78,7 +81,7 @@
         
         
         <div id="container">
-    <div id="blocking"><H1>Designing With Light</H1></div>
+    <div id="blocking"><img src="img/logo.png"/></div>
         
     
         
@@ -110,7 +113,7 @@ I would like to close by citing Einstein's quote: "imagination is more important
  </div> 
         
         
-        <div id="pic"><div id='lol'><p ><BR><BR><b>Spreads from Book</b></p><div class="visuals"><img src="img/spread1.jpg"/>
+        <div id="pic"><div id='lol'><p ><b>Spreads from Book</b></p><div class="visuals"><img src="img/spread1.jpg"/>
             </div><div class="visuals"><img src="img/spread2.jpg"/>
             </div>
             <p class="pull">The photogram presents the viewer with the perfect opportunity to focus on the form of the object(s) it documents, without being distracted by color or other decorative elements.</p>
@@ -126,12 +129,14 @@ I would like to close by citing Einstein's quote: "imagination is more important
           
           
               <div id="clips" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+                  <div class="fb-page" data-href="https://www.facebook.com/joebiden/" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/joebiden/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/joebiden/">Joe Biden</a></blockquote></div>
                   
-                  <div class="fb-page" data-href="https://www.facebook.com/joebiden/" data-tabs="timeline" data-width="500" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/joebiden/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/joebiden/">Joe Biden</a></blockquote></div>
-                  
-                  
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a></div>
-        <p onclick="openNav1()" id="updates">Updates</p>
+            
+            </div>
+                
+        </div>
+       <div id="links"> <p onclick="openNav1()" id="updates">Updates</p></div>
    
         
  
