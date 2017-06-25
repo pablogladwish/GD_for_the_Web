@@ -6,21 +6,21 @@
     
   <style>
       body{overflow-y:hidden;overflow-x:hidden; background: -webkit-linear-gradient(left, rgba(0,0,255,0), rgba(0,0,0,.4s)); 
-    background:blue;}
+    background:red;}
       ::-webkit-scrollbar { 
     display: none; 
       }   
-     
-      
+      .closebtn{font-size: 20px;}
+      a{border-bottom: solid 1px white; line-height: 150%;}
       #links{position: fixed;
-      right: 10px; top:10px;}
+      right: 10px; top:10px;
+      z-index: ; text-align: right;}
       
       .sidenav {
     height: 100%;
     width: 0; 
     position: fixed; 
           z-index: 99999999;
-    z-index: 999;
     position: fixed; right: 0px; background: rgba(255,255,255,.9);
     
     overflow-x: hidden; 
@@ -37,32 +37,30 @@
       font-weight:light;}
       #lol{position:relative;top: 0px;}
       
-      #rewards{width: 500px;height: 200px; color: blue;}
+      #rewards{width: 35vw; height: auto; color: blue; padding-bottom: 100px;}
       
-      .poster{width: 240px; height: auto; margin-left: 10px; float: left;font-weight:normal;background: rgba(255,255,255,.5) ;}
-      #blocking img{height:100%; width: auto; margin-left: 92.125px;}
-      #blocking{position:relative; width:380px; height:85px; float:left; background: rgba(0,0,255,.5); padding: 50px; z-index: 99999; padding: 5px; margin:10px;}
+      .poster{width: 15vw; height: auto; margin-left: 10px; float: left;font-weight:normal;background: rgba(255,255,255,.5) ;}
+      #blocking img{height:auto; width: 90%; margin:auto; display: block; max-width: 275px;}
+      #blocking{position:relative; width:27.2vw; height:119px; float:left; background: rgba(255,0,0,.5); z-index: 99999; padding: 5px; margin:5px;}
       
       img{width:100%; height: auto;}
      
-      p{color:white; font-family:gotham, sans-serif; text-align: center; font-weight: normal; font-size: 20px; margin-bottom:15px; margin-top: 0px;}
+      p{color:white; font-family:gotham, sans-serif;  font-weight: normal; font-size: 20px; margin-bottom:15px; margin-top: 0px;}
       
       .pull{font-family: gotham, sans-serif; text-align: left; font-weight:light; font-size:33px;background: rgba(255,255,255,.5) ; color:blue;}
       
-      #container{width:1000px; margin:auto; overflow-y:hidden;  top:0px; background: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(255,255,255,.5)); 
+      #container{width:70vw; margin:auto; overflow-y:hidden;  top:0px; background: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(255,255,255,.5)); 
     background: -o-linear-gradient(top, rgba(0,0,0,0), rgba(255,255,255,.7)); 
     background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(255,255,255,.7));
     background: linear-gradient(to top, rgba(0,0,0,0), rgba(255,255,255,.7)); ; }
       
-      #pic{position:relative; top:-670px;  width:400px; height:680px; overflow-y: scroll; float:left;  background: rgba(255,255,255,.5) ; padding: 5px;
+      #pic{position:relative; top:-670px;  width:28vw; height:680px; overflow-y: scroll; float:left;  background: rgba(255,255,255,.5) ; margin: 5px;
 }
-      .visuals { position: relative; width:400px;   margin-bottom:10px; margin-top:10px;
+      .visuals { position: relative; width:28vw;   margin-bottom:10px; margin-top:10px;
        }
       
-      h1{font-family: 'Roboto Condensed', sans-serif; text-align: CENTER; font-weight:bold;; font-stretch:condensed; font-size:46px; color: blue; background: rgba(255,255,255,.5) ;}
-      
        
-      #text {width:500px; position:relative; top:0px; left:60px; font-family:gotham,sans-serif; font-weight: bold; font-size: 25px; color: white;line-height: 120%; height:100vh; overflow-y: scroll; z-index: 999; float:left; background: rgba(255,255,255,.4);padding: 5px; padding-left: 5px;}
+      #text {width:35vw; position:relative; top:0px; left:5vw; font-family:gotham,sans-serif; font-weight: bold; font-size: 25px; color: white;line-height: 120%; height:100vh; overflow-y: scroll; z-index: 999; float:left; background: rgba(255,255,255,.4);padding: 5px; padding-left: 5px;}
     </style>
   <meta charset="utf-8" />
 </head>
@@ -106,9 +104,9 @@ I would like to close by citing Einstein's quote: "imagination is more important
   <div id="rewards">          
 
             
-       <div class="poster"><b>Rewards</b><br><br>Uhren Bösch <br>$25 (Poster)<br> Veni Vidi Vici <br>$25 (Poster)<br>TM magazine $50</div><div class="poster"><p></p><img src="img/Boesch.1.jpg"/></div>
+       <div class="poster"><b>Rewards</b><br>TM magazine $50<br>Uhren Bösch <br>$25 (Poster)<br> Veni Vidi Vici <br>$25 (Poster)</div> <div class="poster"><img src="img/TM_Photo.jpeg"/></div><div class="poster"><p></p><img src="img/Boesch.1.jpg"/></div>
     <div class="poster"><p></p><img src="img/VeniVidiVici.jpg"/></div>
-            <div class="poster"><p></p><img src="img/TM_Photo.jpeg"/></div>
+           
        </div>
  </div> 
         
@@ -136,7 +134,7 @@ I would like to close by citing Einstein's quote: "imagination is more important
             </div>
                 
         </div>
-       <div id="links"> <p onclick="openNav1()" id="updates">Updates</p></div>
+       <div id="links"><p> <a onclick="openNav1()" id="updates">Updates</a><br><a>Indiegogo</a><br><a>Facebook</a><br><a>LinkedIn</a></p></div>
    
         
  
