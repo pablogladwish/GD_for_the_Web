@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pablo</title>
+    
+  <style>
+      body{overflow-y:hidden;overflow-x:hidden;  background:white; background-position: top;   background-size: cover;}
+      ::-webkit-scrollbar { 
+    display: none;     
+      }   
+         src: url(img/Gotham-Bold.otf);
+      font-weight:bold;}
+        @font-face {
+    font-family: gotham;
+    src: url(img/Gotham-Light.otf);
+      font-weight:light;}
+      #lol{position:relative;top: 0px;}
+      #rewards{width: 500px;height: 200px;}
+      .poster{width: 240px; height: auto; margin-left: 10px; float: left;font-weight:normal;}
+      #blocking{position:relative; width:400px; height:140px; float:left; z-index: 99999;}
+      img{width:100%; height: auto;}
+      p{color:black; font-family:  gotham,Arial, sans-serif; text-align: center; font-weight: normal; font-size: 20px; margin-bottom:15px; margin-top: 0px;}
+      
+      .pull{font-family: 'Roboto Condensed', sans-serif; text-align: left; font-weight:bold; font-size:33px;}
+      
+      #container{width:1000px; margin:auto; overflow-y:hidden; border:solid red 2px; padding: 0px 20px 20px 20px;}
+     
+      #pic{position:relative; top:-650px;  width:400px; height:663px; overflow-y: scroll; float:left; border-left:solid red 2px; border-top:solid red 2px; padding-left: 8px;
+          padding-top: 8px;
+border-bottom:solid red 2px; padding-bottom: 8px;}
+      .visuals { position: relative; width:400px;   margin-bottom:10px; margin-top:10px;
+      }
+      
+      h1{font-family: 'Roboto Condensed', sans-serif; text-align: left; font-weight:bold;; font-stretch:condensed; font-size:45px; color: black; position:relative; left:-3px;}
+      
+      
+      #text {width:500px; position:relative; top:25px; left:60px; font-family:  gotham, Arial,sans-serif; font-weight: bold; font-size: 25px; color: black;line-height: 120%; height:93vh; overflow-y: scroll; z-index: 999; float:left; border-right:solid red 2px; padding-right: 8px; border-bottom:solid red 2px; padding-bottom: 8px;border-top:solid red 2px;padding-top: 8px;}
+    </style>
+  <meta charset="utf-8" />
+</head>
+
+    <body><div id="container">
+    <div id="blocking"><H1>Designing With Light</H1></div>
+        
+    
+        
+        <div id="text">Hello,
+
+My name is Franz Werner and I am looking for supporters to participate in my crowdfunding project for my publication “Designing with Light” which contains student work of my classes which I have been teaching since the early 80’s at the Rhode Island School of Design.
+<br><br>
+In order to maintain freedom and integrity for my publication I chose self-publishing which requires independent financing for high quality printing and binding of this hard cover book. 
+<br><br>
+The book contains 00 projects all the way from the wet photography method to the digital videography accompanied by diagrams explaining the process involved. 
+
+I want to make this work public
+To democratize art
+
+This book will be a wonderful inspiration for anybody who appreciates art and design and to get connected with form and function. 
+<br><br>
+This book is a tribute to my students but also to my teachers <br>…
+<br>
+I had the opportunity to study with the creme de la creme although I'm not nearly accomplished as my teachers but I always felt an obligation to share. Therefore, my contribution will be to in form of workshops to High Schools, Community Colleges, and the less fortunate.
+
+I would like to close by citing Einstein's quote: "imagination is more important than knowledge”<br><br>
+  <div id="rewards">          
+
+            
+      <hr> <div class="poster"> <br><b>Rewards</b><br><br>Uhren Bösch <br>$25 (Poster)<br> Veni Vidi Vici <br>$25 (Poster)<br>TM magazine $50</div><div class="poster"><p></p><img src="img/Boesch.1.jpg"/></div>
+    <div class="poster"><p></p><img src="img/VeniVidiVici.jpg"/></div>
+            <div class="poster"><p></p><img src="img/TM_Photo.jpeg"/></div>
+       </div>
+ </div> 
+        
+        
+        <div id="pic"><div id='lol'><p ><b>Spreads from Book</b><hr></p><div class="visuals"><img src="img/spread1.jpg"/>
+            </div><div class="visuals"><img src="img/spread2.jpg"/>
+            </div><hr>
+            <p class="pull">The photogram presents the viewer with the perfect opportunity to focus on the form of the object(s) it documents, without being distracted by color or other decorative elements.</p><hr>
+            <div class="visuals"><img src="img/spread3.jpg"/>
+            </div>
+            <hr>
+            <p class="pull">A successful double exposure isn’t solely based on two clever photographs, but also on how well the formal characteristics of either pictures combine.
+</p><hr>
+            <div class="visuals"><img src="img/spread4.jpg"/>
+            </div>
+            
+            </div></div>
+   
+        
+        
+ 
+     <script>   var isSyncingLeftScroll = false;
+var isSyncingRightScroll = false;
+var leftDiv = document.getElementById('pic');
+var rightDiv = document.getElementById('text');
+
+leftDiv.onscroll = function() {
+  if (!isSyncingLeftScroll) {
+    isSyncingRightScroll = true;
+    rightDiv.scrollTop = this.scrollTop;
+  }
+  isSyncingLeftScroll = false;
+}
+
+rightDiv.onscroll = function() {
+  if (!isSyncingRightScroll) {
+    isSyncingLeftScroll = true;
+    leftDiv.scrollTop = this.scrollTop;
+  }
+  isSyncingRightScroll = false;
+}</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/path/to/parallax.min.js"></script>
+        <script>
+            $('#text').scroll(function () { 
+
+   $('#lol').css({
+      'top' : -($(this).scrollTop()/0.8)+"px"
+   }); 
+
+});</script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    
+    </body></html>
