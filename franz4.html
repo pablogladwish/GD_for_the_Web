@@ -7,7 +7,7 @@
   <style>
       body{overflow-y:hidden;overflow-x:hidden; 
     background:#2f2ff9;}
-      ::-webkit-scrollbar { 
+      #pic::-webkit-scrollbar { 
     display: none; 
       }   
       .closebtn{font-size: 22px;}
@@ -73,7 +73,15 @@
        }
       
        
-      #text {width:35vw; position:relative; top:0px; left:5vw; font-family:mengelt,serif; font-weight: lighter; font-size: 30px; color: white;line-height: 110%; height:99vh; overflow-y: scroll; z-index: 999; float:left; background: rgba(255,255,255,.3);padding: 5px; padding-left: 5px;}
+      #text {width:35vw; position:relative; top:0px; left:5vw; font-family:mengelt,serif; font-weight: lighter; font-size: 30px; color: white;line-height: 110%; height:99vh; overflow-y: scroll; z-index: 999; float:left; background: rgba(255,255,255,.3);padding: 5px; padding-left: 5px; overflow-x: hidden;}
+      
+      #text::-webkit-scrollbar { right:15px;
+    display: visible; 
+      background: rgba(0,0,0,0);}   
+      #text::-webkit-scrollbar-thumb {
+  background:url(img/arrow-29.png);
+ 
+}
     </style>
   <meta charset="utf-8" />
 </head>
