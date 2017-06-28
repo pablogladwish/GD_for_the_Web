@@ -12,9 +12,9 @@
           #pic{display: none;}
           body >#container {width:90vw}
           #container > #blocking {width: 100%; margin: auto;}
-    #container >  #links{   top:135px; display: block; left: 12.5vw;  width: 75vw; overflow: visible; text-align:justify;
+   body > #links { top:135px; display: block; left: 7.5vw;  width:85vw; overflow: visible; text-align:justify;
           }}  
-      @media only screen and (max-width: 450px){#links{display: none;}}
+     
       body{overflow-y:hidden;overflow-x:hidden; 
     background:grey;}
       #pic::-webkit-scrollbar { 
@@ -181,7 +181,7 @@ I would like to close by citing Einstein's quote: "imagination is more important
             </div>  </div>
                 
         
-       <div id="links"><p> <a onclick="openNav1()" id="updates">Updates </a><a href="">Indiegogo </a><a href="https://www.linkedin.com/in/franz-werner-4535083/" target="0">LinkedIn </a> <a href="https://twitter.com/risd21" target="0">Twitter </a><a href="https://www.facebook.com/fwerner51" target="0">Facebook </a></p></div>
+       <div id="links"><p> <a onclick="openNav1(clips)" id="updates">Updates </a><a href="">Indiegogo </a><a href="https://www.linkedin.com/in/franz-werner-4535083/" target="0">LinkedIn </a> <a href="https://twitter.com/risd21" target="0">Twitter </a><a href="https://www.facebook.com/fwerner51" target="0">Facebook </a></p></div>
    
         
  
@@ -216,7 +216,7 @@ rightDiv.onscroll = function() {
 
 });</script>
                
-        <script>function openNav1() {document.getElementById("clips").style.width = "500px";
+        <script>function openNav1("clips") {document.getElementById("clips").style.width = "500px";
 }</script>
 <script>function closeNav1() {
     document.getElementById("clips").style.width = "0";
