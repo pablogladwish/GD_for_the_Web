@@ -3,8 +3,18 @@
 
 <head>
   <title>Designing with Light</title>
-    
+    <meta name="viewport" content="width=device-width" />
   <style>
+      @media only screen and (max-width: 900px){
+          ::-webkit-scrollbar { 
+    display: none; 
+          }  #container > #text{ top:60px; width: 95%; margin: auto; overflow-x: visible; float: none;}
+          #pic{display: none;}
+          body >#container {width:90vw}
+          #container > #blocking {width: 100%; margin: auto;}
+    #container >  #links{   top:135px; display: block; left: 12.5vw;  width: 75vw; overflow: visible; text-align:justify;
+          }}  
+      @media only screen and (max-width: 450px){#links{display: none;}}
       body{overflow-y:hidden;overflow-x:hidden; 
     background:grey;}
       #pic::-webkit-scrollbar { 
@@ -15,14 +25,16 @@
       #links{position: fixed;
       right: 10px; top:10px;
       text-align: right;
+          width: 100px
       }
+      iframe{margin: auto; display: block;}
       .bl{color:#2f2ff9; text-align: center;}
       .sidenav {
     height: 100%;
     width: 0; 
     position: fixed; 
           z-index: 99999999;
-    position: fixed; right: 0px; background:     background: -webkit-linear-gradient(left, rgba(255,255,255,1), rgba(255,255,255,.5)); /* For Safari 5.1 to 6.0 */
+    position: fixed; right: 0px; background: ;    background: -webkit-linear-gradient(left, rgba(255,255,255,1), rgba(255,255,255,.5)); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(right, rgba(255,255,255,1), rgba(255,255,255,0)); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(right, rgba(255,255,255,1), rgba(255,255,255,.5)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,.5));
@@ -39,7 +51,10 @@
     font-family: mengelt;
     src: url(img/MengeltBaselAntiquaPro-Bd.ttf);
       font-weight:bold;}
-      
+            @font-face {
+    font-family: gotham;
+    src: url(img/Gotham-Medium.otf);
+      font-weight:normal;}
       @font-face {
     font-family: gotham;
     src: url(img/Gotham-Bold.otf);
@@ -47,45 +62,49 @@
         @font-face {
     font-family: gotham;
     src: url(img/Gotham-Light.otf);
-      font-weight:light;}
+      font-weight:lighter;}
       #lol{position:relative;top: 0px;}
       
       #rewards{width: 35vw; height: auto; color: #2f2ff9; padding-bottom: 100px; height:700px;  font-family: gotham, sans-serif; font-size: 20px; line-height: 105%;}
       
       .poster{width: 17vw; height: auto; margin-right: 5px; float: left;font-weight:normal;background: rgba(255,255,255,.5) ;}
       #blocking img{height:auto; width: 90%; margin:auto; display: block; max-width: 275px;}
-      #blocking{position:relative; width:27.2vw; height:119px; float:left; background: rgba(0,0,255,.5); z-index: 99999; padding: 5px; margin:5px;}
+      #blocking{position:relative; width:27.2vw; height:119px;  background: rgba(0,0,255,.5); z-index: 99999; padding: 5px; margin:5px;}
       
       img{width:100%; height: auto;}
      
-      p{color:white; font-family:gotham, sans-serif;  font-weight: normal; font-size: 20px; margin-bottom:15px; margin-top: 0px;}
+      p{color:#5252ec; font-family:gotham, sans-serif;  font-weight: lighter; font-size: 20px; margin-bottom:15px; margin-top: 0px;}
       
-      .pull{font-family: gotham, sans-serif; text-align: left; font-weight:bold; font-size:25px;background: rgba(255,255,255,.5) ; color:#5252ec; padding: 5px; }
+      .pull{font-family: gotham, sans-serif; text-align: left; font-weight:normal; font-size:25px;background: rgba(255,255,255,.5) ; color:#5252ec; padding: 5px; }
       
       #container{width:75vw; margin:auto; overflow-y:hidden; top:0px;   background: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(255,255,255,.6)); 
     background: -o-linear-gradient(top, rgba(0,0,0,0), rgba(255,255,255,.6)); 
     background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(255,255,255,.6));
     background: linear-gradient(to top, rgba(0,0,0,0), rgba(255,255,255,.6)); ;}
       
-      #pic{position:relative; top:-665px;  width:28vw; height:680px; overflow-y: scroll; float:left;  background: rgba(255,255,255,.5) ; margin: 5px;
+      #pic{position:relative; bottom: 0px;  width:28vw; height:680px; overflow-y: scroll; float:left;  background: rgba(255,255,255,.5) ; margin: 5px;
 }
       .visuals { position: relative; width:28vw;   margin-bottom:10px; margin-top:10px;
        }
       
        
-      #text {width:38vw; position:relative; top:0px; left:6vw; font-family:mengelt,serif; font-weight: lighter; font-size: 30px; color: #2f2ff9;line-height: 110%; height:99vh; overflow-y: scroll; z-index: 999; float:left; background: rgba(255,255,255,.3);margin:5px;padding: 5px; padding-left: 5px;overflow-x: visible;}
+      #text {width:38vw; position:relative; top:-140px; left:0vw; font-family:mengelt,serif; font-weight: lighter; font-size: 30px; color: #2f2ff9;line-height: 110%; height:99vh; overflow-y: scroll; z-index: 999; float:right; background: rgba(255,255,255,.3);margin:5px;padding: 5px; padding-left: 5px;overflow-x: visible;}
       
       #text::-webkit-scrollbar { width:30px;
     display: visible; background-repeat:no-repeat;
-      }   
+      } 
+      
+      a{color:white; text-decoration: none; }
+      
       #text::-webkit-scrollbar-thumb {background-repeat:no-repeat;
   background:url(https://68.media.tumblr.com/1f29dab1062d66c08e002f3512895c43/tumblr_os527yOtLz1rjwiwxo1_1280.png); background-repeat:no-repeat;
-       
+          
 background-position: top;
           background-size:4vw;   
              
  
 }
+        }
     </style>
   <meta charset="utf-8" />
 </head>
@@ -138,29 +157,31 @@ I would like to close by citing Einstein's quote: "imagination is more important
         
         
         <div id="pic"><div id='lol'><p class="bl" >Examples  from Book</p><div class="visuals"><img src="img/spread1.jpg"/>
-            </div><div class="visuals"><img src="img/spread2.jpg"/>
+            </div>  <div class="pull">The photogram presents the viewer with the perfect opportunity to focus on the form of the object(s) it documents, without being distracted by color or other decorative elements.</div><div class="visuals"><img src="img/spread2.jpg"/>
             </div>
-            <p class="pull">The photogram presents the viewer with the perfect opportunity to focus on the form of the object(s) it documents, without being distracted by color or other decorative elements.</p>
+          
             <div class="visuals"><img src="img/spread3.jpg"/>
             </div>
             
-            <p class="pull">A successful double exposure isn’t solely based on two clever photographs, but also on how well the formal characteristics of either pictures combine.
-</p>
+            <div class="pull">A successful double exposure isn’t solely based on two clever photographs, but also on how well the formal characteristics of either pictures combine.
+</div>
             <div class="visuals"><img src="img/spread4.jpg"/>
+            </div><p class="bl">Working in the Darkroom</p>
+             <div class="visuals"><img src="img/1.Darkroom%20copy.jpg"/>
+                  <div class="visuals"><img src="img/2.Darkroom%20copy.jpg"/><p class="bl">Student Video Work</p><iframe width='100%' &showinfo=0 src="https://www.youtube.com/embed/Xz6yBbBRr8Y?ecver=1modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
             </div>
-            
-            </div></div>
-          
+            </div>
+          </div>
           
               <div id="clips" class="sidenav">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
                   <div class="fb-page" data-href="https://www.facebook.com/joebiden/" data-tabs="timeline" data-width="500" data-height="800" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/joebiden/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/joebiden/">Joe Biden</a></blockquote></div>
                   
-            
             </div>
+            </div>  </div>
                 
-        </div>
-       <div id="links"><p> <a onclick="openNav1()" id="updates">Updates</a><br><a>Indiegogo</a><br><a>Facebook</a><br><a>LinkedIn</a></p></div>
+        
+       <div id="links"><p> <a onclick="openNav1()" id="updates">Updates </a><a href="">Indiegogo </a><a href="https://www.linkedin.com/in/franz-werner-4535083/" target="0">LinkedIn </a> <a href="https://twitter.com/risd21" target="0">Twitter </a><a href="https://www.facebook.com/fwerner51" target="0">Facebook </a></p></div>
    
         
  
@@ -185,7 +206,7 @@ rightDiv.onscroll = function() {
   isSyncingRightScroll = false;
 }</script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="/path/to/parallax.min.js"></script>
+
         <script>
             $('#text').scroll(function () { 
 
