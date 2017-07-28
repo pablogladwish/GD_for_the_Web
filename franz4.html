@@ -9,21 +9,22 @@
           ::-webkit-scrollbar { 
     display: none; 
           }
-         #links > p > a {width: 38vw; color:#2f2ff9;display: list-item; text-align: center; list-style: none; margin: -2px; border-bottom-color:#2f2ff9;font-size: 23px; }
+      
+         #links > p > a {width: 38vw; color:#2f2ff9;display: list-item; text-align: center; list-style: none; margin: -2px; border-bottom-color:#2f2ff9;font-size: 1.3em; }
           #rewards > .poster {width: 100%;margin-bottom: 200px;}
           #text > .rewards >.poster {width:100%; }
           #text > .rewards  {width:100%; }
           #links > p > #updates{display: none;}
      
-          #container > #text{ top:0px; width: 95%; margin: auto; overflow-x: visible; float: none; font-size: 30px;}
+          #container > #text{ top:0px; width: 95%; margin: auto; overflow-x: visible; float: none; font-size: 2em;}
           #pic{display: none;}
           body >#container {width:90vw; }
-          #container > #blocking {width: 50%; left: 0; }
+          #container > #blocking {width: 50%; left: 0; height:23vw; }
    body > #links { top:10px; display: block; left: 57.5vw;  width:85vw; overflow: visible; text-align:justify;
           }}  
-     
+     .tab {text-indent: 2em;margin-bottom: 0px;}
       body{overflow-y:hidden;overflow-x:hidden; 
-    background:grey; max-width: 1317px;}
+    background:grey; max-width: 1317px; hyphens:manual; hypenate-limit-zone: 10%;}
       #pic::-webkit-scrollbar { 
     display: none; 
       }   
@@ -32,7 +33,8 @@
       #links{position: fixed;
       right: 10px; top:10px;
       text-align: right;
-          width: 100px
+          width: 100px;
+          font-family: gotham, sans-serif;
       }
       #mobilelnk{display:none;}
       iframe{margin: auto; display: block;}
@@ -42,9 +44,9 @@
     width: 0px;
     position: fixed; top: 10px;
           z-index: 99999999;
-    position: fixed; right: 0px; background: ;    background: -webkit-linear-gradient(left, rgba(255,255,255,1), rgba(255,255,255,.5)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, rgba(255,255,255,1), rgba(255,255,255,0)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, rgba(255,255,255,1), rgba(255,255,255,.5)); /* For Firefox 3.6 to 15 */
+    position: fixed; right: 0px; background: ;    background: -webkit-linear-gradient(left, rgba(255,255,255,1), rgba(255,255,255,.5)); 
+    background: -o-linear-gradient(right, rgba(255,255,255,1), rgba(255,255,255,0)); 
+    background: -moz-linear-gradient(right, rgba(255,255,255,1), rgba(255,255,255,.5))
     background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,.5));
     
     overflow-x: hidden; 
@@ -73,7 +75,7 @@
       font-weight:lighter;}
       #lol{position:relative;top: 0px;}
       
-      .rewards{width: 35vw; height: auto; color: #2f2ff9; padding-bottom: 100px;   font-family: gotham, sans-serif; font-size: 20px; line-height: 105%;}
+      .rewards{width: 35vw; height: auto; color: #2f2ff9; padding-bottom: 100px;   font-family: gotham, sans-serif; font-size: 0.7em; line-height: 105%;}
       
       .poster{width: 17vw; height: auto; min-height: 266px; margin-right: 5px; margin-bottom: 5px; float: left;font-weight:normal;background: rgba(255,255,255,.2) ;}
       #blocking img{height:auto; width: 90%; margin:auto; display: block; max-width: 275px;}
@@ -81,22 +83,23 @@
       
       img{width:100%; height: auto;}
      
-      p{color:#5252ec;  font-family:gotham, sans-serif;  font-weight: lighter; font-size: 20px; margin-bottom:15px; margin-top: 0px;}
+      p{color:#5252ec;    font-weight: lighter;  margin-bottom:15px; margin-top: 0px;}
       
-      .pull{font-family: gotham, sans-serif; text-align: left; font-weight:normal; font-size:25px;background: rgba(255,255,255,.5) ; color:#5252ec; padding: 5px; }
+      .pull{font-family: gotham, sans-serif; text-align: left; font-weight:normal; font-size:1em;background: rgba(255,255,255,.5) ; color:#5252ec; padding: 5px; }
       
       #container{width:75vw; margin:auto; overflow-y:hidden; top:0px;   background: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(255,255,255,.6)); 
     background: -o-linear-gradient(top, rgba(0,0,0,0), rgba(255,255,255,.6)); 
     background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(255,255,255,.6));
     background: linear-gradient(to top, rgba(0,0,0,0), rgba(255,255,255,.6)); ;}
       
-      #pic{position:relative; bottom: 0px;  width:28vw; height:95vh; overflow-y: scroll; float:left;  background: rgba(255,255,255,.5) ; margin: 5px;
+      #pic{font-family:gotham, sans-serif; position:relative; bottom: 0px;  width:28vw; height:95vh; overflow-y: scroll; float:left;  background: rgba(255,255,255,.5) ; margin: 5px;
+          font-size: 1.5em;
 }
       .visuals { position: relative; width:28vw;   margin-bottom:10px; margin-top:10px;
        }
       
        
-      #text {width:38vw; position:relative; top:-140px; left:0vw; font-family:mengelt,serif; font-weight: lighter; font-size: 30px; color: #2f2ff9;line-height: 110%; height:97vh; overflow-y: scroll; z-index: 999; float:right; background: rgba(255,255,255,.3);margin:5px;padding: 5px; padding-left: 5px;overflow-x: visible;}
+      #text {width:38vw; position:relative; top:-140px;  font-family:mengelt,serif; font-weight: lighter; font-size: 2em; color: #2f2ff9;line-height: 110%; height:97vh; overflow-y: scroll; z-index: 999; float:right; background: rgba(255,255,255,.3);margin:5px;padding: 5px; padding-left: 5px;overflow-x: visible;}
       
       #text::-webkit-scrollbar { width:30px;
     display: visible; background-repeat:no-repeat;
@@ -135,30 +138,24 @@ background-position: top;
         
     
         
-            <div id="text"><span class="bl"><b>Designing With Light</b></span><br>
-            Hello,
+            <div id="text"><span class="bl"><b>Designing With Light</b></span><br><br>
+          <p class="tab">  Hello,
 
-My name is Franz Werner and this is my crowdfunding project.<br><br>
-
-“Designing with Light” contains 37 years of inspiring student work.<br><br>
-
-I chose self-publishing which requires independent financing for printing and binding of this book. <br><br>
-
-The book consists of over 500 projects, all the way from the wet photography method to digital videography, accompanied by diagrams explaining the process involved. <br><br>
-
-I want to make this work public—to democratize art.<br>
-<br>
-So the question is, who is this book for?<br><br>
-
-My book will be a wonderful inspiration for anyone who appreciates art and design and wishes to be connected with form and function. Art infuses an inner peace of mind. <br><br>
-
-This book is a tribute to my students but also to my teachers.<br><br>
-
-I had the opportunity to study with the highly esteemed faculty of the Kunstgewerbeschule Basel, although I’m not nearly as accomplished as my teachers, but I always felt an obligation to share. Therefore, my contribution will be in the form of workshops at High Schools, Community Colleges, and for the less fortunate.<br><br>
-
-I would like to close by citing Einstein’s quote: “Imagination is more important than knowledge”.<br><br>
-
-Thank you for your support.<br><br>
+My name is Franz Werner and this is my crowd&shy;funding project.
+“Designing with Light” contains 37 years of inspiring student work.
+I chose self-publishing which requires independent financing for printing and binding of this book. </p>
+ <p class="tab">
+The book consists of over 500 projects, all the way from the wet photography method to digital videography, accompanied by diagrams explaining the process involved. 
+I want to make this work public—to democratize art. </p>
+<p class="tab">
+So the question is, who is this book for?
+My book will be a wonderful inspiration for anyone who appreciates art and design and wishes to be connected with form and function. Art infuses an inner peace of mind.</p> 
+ <p class="tab">
+This book is a tribute to my students but also to my teachers.
+I had the opportunity to study with the highly esteemed faculty of the Kunstgewer&shy;beschule Basel, although I’m not nearly as accomplished as my teachers, but I always felt an obligation to share. Therefore, my contribution will be in the form of workshops at High Schools, Community Colleges, and for the less fortunate.
+I would like to close by citing Einstein’s quote: “Imagination is more important than knowledge”.</p>
+ <p class="tab"><br>
+     Thank you for your support.<br><br></p>
   <div class="rewards">  <p>      
 <b>Rewards For Donation</b></p>  
            <div class="poster"><p>Veni Vidi Vici <br>$99</p><img src="img/VeniVidiVici.jpg"/></div>    
@@ -167,8 +164,7 @@ Thank you for your support.<br><br>
       <div class="rewards"><!--<p style="float:left;">TM magazine $49</p>--><div class="poster"><img src="img/TM/TM_cover.jpg"/></div>
              
       <div class="poster" ><img src="img/TM/spread6.png"/></div></div><div class="rewards">
- <div class="poster" ><img src="img/TM/spread5.jpg"/></div>
-                <div class="poster"><img src="img/TM/spread3.1.jpg"/></div>
+
         
    
      
@@ -188,7 +184,7 @@ Thank you for your support.<br><br>
             <div class="visuals"><img src="img/spread4.jpg"/>
             </div><p class="bl">Working in the Darkroom</p>
              <div class="visuals"><img src="img/1.Darkroom%20copy.jpg"/>
-                  <div class="visuals"><img src="img/2.Darkroom%20copy.jpg"/><p class="bl">Examples of Student Video</p><iframe width='100%' height='250px'   src="https://www.youtube.com/embed/MCeil_8fj2s??modestbranding=1&rel=0&amp;fs=0&amp;showinfo=0;"frameborder="0" allowfullscreen></iframe>
+                  <div class="visuals"><img src="img/2.Darkroom%20copy.jpg"/><p class="bl">Examples of Student Video</p><iframe width='100%' height='250px'   src="https://www.youtube.com/embed/WhdPqZIJq8E?ecver=1"frameborder="0" allowfullscreen></iframe>
             </div>
             </div>
           </div>
