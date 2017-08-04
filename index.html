@@ -10,35 +10,49 @@
     display: none; 
           }
           body{overflow-y: hidden;}
-         #links > p > a {width: 38vw; color:#5252ec;display: list-item; text-align: center; list-style: none; margin: -2px; border-bottom-color:#5252ec;font-size: 1.3em; }
+         #links > p > a {width: 38vw; color:#5252ec;display: list-item; text-align: center; list-style: none; margin: -2px; border-bottom-color:#5252ec;font-size: .8em; line-height: 130%; }
+          
           #rewards > .poster {width: 100%;margin-bottom: 200px;}
           #text > .rewards >.poster {width:100%; }
-          #text > .rewards  {width:100%; }
+          #text > .rewards  {width:100%; font-size: .8em; }
+          
           #links > p > #updates{display: none;}
      
-          #container > #text{ top:0px; width: 95%; margin: auto; overflow-x: visible; float: none; font-size: 2em;}
+          #container > #text{ top:0px; width: 95%; margin: auto; overflow-x: visible; float: none; font-size: 1.4em;}
+        
           #pic{display: none;}
           body >#container {width:90vw; }
           #container > #blocking {width: 50%; left: 0; height:23vw; }
    body > #links { top:10px; display: block; left: 57.5vw;  width:85vw; overflow: visible; text-align:justify;
           }}  
+      #text  .rewards  p {padding-top: 10px; margin-bottom: 5px;}
+      
      .tab {text-indent: 2em;margin-bottom: 0px;}
+      
       body{overflow-y:hidden;overflow-x:hidden; 
-    background:grey; max-width: 1317px; hyphens:manual; }
+    background:grey; max-width: 1317px; hyphens:manual; 
+      -webkit-font-smoothing: antialiased !important;
+-moz-osx-font-smoothing: grayscale !important;
+text-rendering: optimizeLegibility !important;}
+      
       #pic::-webkit-scrollbar { 
     display: none; 
       }   
+      
+     
       .closebtn{font-size: 22px; color:#5252ec; }
       a{border-bottom: solid 1px white; line-height: 150%; }
+      
       #links{position: fixed;
       right: 10px; top:10px;
       text-align: right;
-          width: 100px;
+          width: 150px;
           font-family: gotham, sans-serif;
-      font-size: 1em;}
+      font-size: 1.4em;
+      }
       
       iframe{margin: auto; display: block; padding-bottom: 5px;}
-      .bl{color:#5252ec; padding-top: 7px; padding-left: 5px;}
+      .bl{color:#5252ec; padding-top: 4px; padding-left: 5px;}
       .sidenav {
     height: 100%;
     width: 0px;
@@ -84,17 +98,17 @@
       
       .norm{font-weight: normal;}
      
-      p{color:#5252ec;    font-weight: lighter;  margin-bottom:15px; margin-top: 0px;}
+      p{color:#5252ec;    font-weight: lighter;  margin-bottom:5px; margin-top: 0px;}
       
-      .pull{font-family: gotham, sans-serif; text-align: left; font-weight:normal; font-size:1em;background: rgba(255,255,255,.5) ; color:#5252ec; padding: 5px; }
+      .pull{font-family: gotham, sans-serif; text-align: left; font-weight:normal; background: rgba(255,255,255,.5) ; color:#5252ec; padding: 5px; }
       
-      #container{width:75vw; margin:auto; overflow-y:hidden; top:0px;   background: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(255,255,255,.6)); 
+      #container{width:72vw; margin:auto; overflow-y:hidden; top:0px;   background: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(255,255,255,.6)); 
     background: -o-linear-gradient(top, rgba(0,0,0,0), rgba(255,255,255,.6)); 
     background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(255,255,255,.6));
     background: linear-gradient(to top, rgba(0,0,0,0), rgba(255,255,255,.6)); ;}
       
       #pic{font-family:gotham, sans-serif; position:relative; bottom: 0px;  width:28vw; height:95vh; overflow-y: scroll; float:left;  background: rgba(255,255,255,.5) ; margin: 5px;
-          font-size: 1.5em; font-weight: normal;
+          font-size: 1.4em; font-weight: normal;
 }
       .visuals { position: relative; width:28vw;   margin-bottom:10px; margin-top:10px;
        }
@@ -141,7 +155,7 @@ background-position: top;
     
         
             <div id="text"><span class="bl"><b>Designing With Light</b></span><br><br>
-          <p class="tab">  Hello,
+          <p >  Hello,
 
 My name is Franz Werner and this is my crowd&shy;funding project.
 “Designing with Light” contains 37 years of inspiring student work.
@@ -156,10 +170,10 @@ My book will be a wonderful inspiration for anyone who appreciates art and desig
 This book is a tribute to my students but also to my teachers.
 I had the opportunity to study with the highly esteemed faculty of the Kunstgewer&shy;beschule Basel, although I’m not nearly as accomplished as my teachers, but I always felt an obligation to share. Therefore, my contribution will be in the form of workshops at High Schools, Community Colleges, and for the less fortunate.
 I would like to close by citing Einstein’s quote: “Imagination is more important than knowledge”.</p>
- <p class="tab"><br>
+ <p class="tab">
      Thank you for your support.<br><br></p>
-  <div class="rewards">  <p><b>      
-      Rewards For Donation</b></p>  
+  <div class="rewards">  <p><b>   
+      Rewards For Donation</b></p>  <br>
            <div class="poster"><p>Veni Vidi Vici <br>$99</p><img src="img/VeniVidiVici.jpg"/></div>    
       <div class="poster"><p>Uhren Bösch <br>$99 </p><img src="img/Boesch.1.jpg"/></div>
     </div>
@@ -186,9 +200,9 @@ I would like to close by citing Einstein’s quote: “Imagination is more impor
             <div class="visuals"><img src="img/spread4.jpg"/>
                 </div><p class="bl"><b> Working in the Darkroom</b></p>
              <div class="visuals"><img src="img/1.Darkroom%20copy.jpg"/></div>
-                <div class="visuals"><img src="img/2.Darkroom%20copy.jpg"/><p class="bl"><b> Student Videos</b></p><iframe width='100%' height='250px'   src="https://www.youtube.com/embed/WhdPqZIJq8E?ecver=1"frameborder="0" allowfullscreen></iframe><p class="bl"><b> Printing Posters</b></p>
-                      <iframe width='100%' height='250px'   src="https://www.youtube.com/embed/pB4SMZZTRYo?ecver=1"frameborder="0" allowfullscreen></iframe>
-            </div>
+                <div class="visuals"><img src="img/2.Darkroom%20copy.jpg"/></div><p class="bl"><b> Student Videos</b></p><div class="visuals"><iframe width='100%' height='250px'   src="https://www.youtube.com/embed/WhdPqZIJq8E?ecver=1"frameborder="0" allowfullscreen></iframe></div><div class="visuals"><p class="bl"><b> Printing Posters</b></p></div><div class="visuals">
+                <iframe width='100%' height='250px'   src="https://www.youtube.com/embed/pB4SMZZTRYo?ecver=1"frameborder="0" allowfullscreen></iframe></div>
+            
             
           </div>
           
