@@ -3,9 +3,9 @@
 
 <head>
   <title>Designing with Light</title>
-   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width" />
   <style>
-      @media only screen and (max-width: 900px){
+      @media  handheld, screen and (max-width: 900px){
           ::-webkit-scrollbar { 
     display: none; 
           }
@@ -21,10 +21,15 @@
           #container > #text{ top:0px; width: 95%; margin: auto; overflow-x: visible; float: none; font-size: 1.4em;}
         
           #pic{display: none;}
+          
           body >#container {width:90vw; }
+          
           #container > #blocking {width: 50%; left: 0; height:23vw; }
+          
    body > #links { top:10px; display: block; left: 57.5vw;  width:85vw; overflow: visible; text-align:justify;
-          }}  
+          }
+      }  
+      
       #text  .rewards  p {padding-top: 10px; margin-bottom: 5px;}
       
      .tab {text-indent: 2em;margin-bottom: 0px;}
